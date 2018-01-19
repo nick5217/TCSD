@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tst2</title>
+</head>
+<body>
+<div id="guess" style="vertical-align: center">
+  &nbsp&nbsp
+  &nbsp&nbsp
+  &nbsp&nbsp
+  &nbsp&nbsp
+  寄件地址:&nbsp&nbsp
+  <el-input placeholder="请输入地址" style="width: 20%"></el-input>
+  &nbsp&nbsp 收件地址:&nbsp&nbsp;<el-input placeholder="请输入地址" style="width: 20%"></el-input>
+  <!--<br><br>-->
+  <!--&nbsp&nbsp&nbsp&nbsp-->
+  &nbsp&nbsp
+  &nbsp&nbsp
+  <el-dropdown>
+    <el-button type="primary">
+      选择产品<i class="el-icon-arrow-down el-icon--right"></i>
+    </el-button>
+    <el-dropdown-menu slot="dropdown">
+      <el-dropdown-item>E速达</el-dropdown-item>
+      <el-dropdown-item>定制配</el-dropdown-item>
+      <el-dropdown-item>E直达</el-dropdown-item>
+      <el-dropdown-item>第三方</el-dropdown-item>
+    </el-dropdown-menu>
+  </el-dropdown>
+  <br><br>
+  <center>
+    <button class="btn btn-success btn-lg"
+            style="outline: none;vertical-align: center"
+            onclick="s()">预估邮费
+    </button>
+    <br>
+    <div id="txt1">
+      <el-alert
+        title="您的邮费为 15 元"
+        type="success"
+        center
+        show-icon
+      >
+      </el-alert>
+      <!--<script type="text/javascript">-->
+
+      <!--</script>-->
+    </div>
+</body>
+</html>

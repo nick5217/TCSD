@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vuetst</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <link rel="shortcut icon" href="../src/assets/favicon  .ico" type="image/x-icon">
+</head>
+<body>
+<div id="guess">
+  <button onclick="s()">show</button>
+</div>
+<div id="t1">
+  see
+</div>
+<div id="t3">
+  <p v-text="m1"></p>
+  <input type="text" placeholder="hello" v-model="m1">
+  <input type="text" placeholder="hello" v-model="m1">
+
+</div>
+</body>
+<script type="application/javascript">
+  // import vue from 'Vue'
+  var t2 = document.getElementById("t1");
+
+  function s() {
+    t2.style.display = "block"
+  }
+
+
+  new Vue({
+    el: '#t3',
+    data: {
+      m1: 'hello1'
+
+    }
+  })
+
+</script>
+<style>
+  #t1 {
+    display: none;
+
+  }
+
+
+</style>
+</html>
