@@ -91,25 +91,25 @@
                  :zoom="12"
                  :scroll-wheel-zoom="true"
                  style="height: 600px">
-        <bm-marker :position="{lng: 121.462991,lat:31.259954}" title="不夜城商务圈投揽部:沪太路129号4楼 联系人：屠培俊 13816136250"
+        <bm-marker :position="{lng: 121.462991,lat:31.259954}" title="不夜城商务圈投揽部:沪太路129号4楼"
                    animation="BMAP_ANIMATION_BOUNCE"></bm-marker>
-        <bm-marker :position="{lng:121.510596,lat:31.261789}" title="北外滩商务圈投揽部:公平路462号 联系人：赵丽民 15901662361"
+        <bm-marker :position="{lng:121.510596,lat:31.261789}" title="北外滩商务圈投揽部:公平路462号"
                    animation="BMAP_ANIMATION_BOUNCE"></bm-marker>
-        <bm-marker :position="{lng: 121.464345,lat:31.1781}" title="徐汇商务圈投揽部:云锦路187号 联系人：孙德明 18918381187"
+        <bm-marker :position="{lng: 121.464345,lat:31.1781}" title="徐汇商务圈投揽部:云锦路187号"
                    animation="BMAP_ANIMATION_BOUNCE"></bm-marker>
-        <bm-marker :position="{lng: 121.497663,lat:31.214969}" title="外滩商务圈投揽部:南车站路182路 联系人：刘军 13818967613"
+        <bm-marker :position="{lng: 121.497663,lat:31.214969}" title="外滩商务圈投揽部:南车站路182路"
                    animation="BMAP_ANIMATION_BOUNCE"></bm-marker>
-        <bm-marker :position="{lng: 121.412094,lat:31.229262}" title="长风商务圈投揽部:中山北路3663号  联系人：王佳辉 15921636247"
+        <bm-marker :position="{lng: 121.412094,lat:31.229262}" title="长风商务圈投揽部:中山北路3663号"
                    animation="BMAP_ANIMATION_BOUNCE"></bm-marker>
-        <bm-marker :position="{lng: 121.405249,lat:31.165893}" title="漕河泾商务圈投揽部:古美路1487弄17座1楼 联系人：杨晓江 18221038970"
+        <bm-marker :position="{lng: 121.405249,lat:31.165893}" title="漕河泾商务圈投揽部:古美路1487弄17座1楼"
                    animation="BMAP_ANIMATION_BOUNCE"></bm-marker>
-        <bm-marker :position="{lng: 121.498295,lat:31.349751}" title="五角场商务圈投揽部:淞南路345号2楼 联系人：陈挺 15901662557"
+        <bm-marker :position="{lng: 121.498295,lat:31.349751}" title="五角场商务圈投揽部:淞南路345号2楼"
                    animation="BMAP_ANIMATION_BOUNCE"></bm-marker>
-        <bm-marker :position="{lng: 121.416371,lat:31.234767}" title="虹桥商务圈投揽部:中山北路3617号2楼 联系人：王佳辉 15921636247"
+        <bm-marker :position="{lng: 121.416371,lat:31.234767}" title="虹桥商务圈投揽部:中山北路3617号2楼"
                    animation="BMAP_ANIMATION_BOUNCE"></bm-marker>
         <bm-marker :position="{lng:121.594305,lat:31.211182}" title="张江高科技商务圈投揽部:中山北路3617号2楼 "
                    animation="BMAP_ANIMATION_BOUNCE"></bm-marker>
-        <bm-marker :position="{lng: 121.56204,lat:31.230854}" title="陆家嘴商务圈投揽部:迎春路879号 联系人：陆彦 18918383007"
+        <bm-marker :position="{lng: 121.56204,lat:31.230854}" title="陆家嘴商务圈投揽部:迎春路879号"
                    animation="BMAP_ANIMATION_BOUNCE"></bm-marker>
 
       </baidu-map>
