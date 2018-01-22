@@ -16,6 +16,7 @@ module.exports = {
   },
   externals: {
     "BMap": "BMap"
+
   },
   output: {
     path: config.build.assetsRoot,
@@ -88,7 +89,7 @@ module.exports = {
       $: "jquery",
       jQuery: "jquery",
       jquery: "jquery",
-      "window.jQuery": "jquery"
+
     })
   ]
 

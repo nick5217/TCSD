@@ -4,9 +4,7 @@
 
   <img src="../assets/XREU9272.jpg" width="100%"/>
   <div id="introduce">
-
     <hr>
-
     <el-tabs :tab-position="tabPosition1" style="height: 5000px">
       <el-tab-pane label="E速达">
 

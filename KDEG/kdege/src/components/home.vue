@@ -1,75 +1,7 @@
 <template>
   <body>
   <my-header></my-header>
-  <!--<div class="all" style="z-index: -10">-->
-  <!--<div id="hd" style="align-content: center">-->
-  <!--&lt;!&ndash;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&ndash;&gt;-->
-  <!--&lt;!&ndash;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&ndash;&gt;-->
-  <!--&lt;!&ndash;<img src="../assets/横板Logo（小）.png" width="30%" height="30%"/>&ndash;&gt;-->
-  <!--&lt;!&ndash;<span&ndash;&gt;-->
-  <!--&lt;!&ndash;style="font-style: italic;font-size: 40px;;display: inline-block;;margin-bottom: 10px"><strong>新时代即时递寄递平台</strong>&ndash;&gt;-->
-  <!--&lt;!&ndash;</span>&ndash;&gt;-->
-  <!--<img src="../assets/新logo.png" width="100%"/>-->
-  <!--</div>-->
 
-  <!--<el-menu :default-active="activeIndex2"-->
-  <!--class="el-menu-demo"-->
-  <!--mode="horizontal"-->
-  <!--@select="handleSelect"-->
-  <!--background-color=""-->
-  <!--text-color="black"-->
-  <!--active-text-color="#f9872a"-->
-  <!--style="margin-bottom: 20px">-->
-  <!--<el-menu-item index="1">首页</el-menu-item>-->
-  <!--<el-submenu index="2">-->
-  <!--<template slot="title">-->
-  <!--<router-link to="/intrdc" style="text-decoration: none;color: black">产品介绍</router-link>-->
-  <!--</template>-->
-  <!--<el-menu-item index="2-1">E速达</el-menu-item>-->
-  <!--<el-menu-item index="2-2">定制配</el-menu-item>-->
-  <!--<el-menu-item index="2-3">E直达</el-menu-item>-->
-  <!--<el-menu-item index="2-4">第三方</el-menu-item>-->
-  <!--</el-submenu>-->
-  <!--<el-submenu index="3">-->
-  <!--<template slot="title">-->
-  <!--<router-link to="/about" style="text-decoration: none;color: black">关于我们</router-link>-->
-  <!--</template>-->
-  <!--<el-menu-item index="3-1">-->
-  <!--公司介绍-->
-  <!--</el-menu-item>-->
-  <!--<el-menu-item index="3-2">-->
-  <!--联系我们-->
-  <!--</el-menu-item>-->
-  <!--<el-menu-item index="3-3">-->
-  <!--站点分布-->
-  <!--</el-menu-item>-->
-
-  <!--<el-menu-item index="3-4">第三方</el-menu-item>-->
-  <!--</el-submenu>-->
-  <!--<el-menu-item index="4">-->
-  <!--<router-link to="/interview" style="text-decoration: none;color: black">E哥招募</router-link>-->
-  <!--</el-menu-item>-->
-  <!--<el-menu-item index="5"><a href="http://www.ems.com.cn/" style="text-decoration: none">EMS</a>-->
-  <!--</el-menu-item>-->
-  <!--</el-menu>-->
-  <!--&lt;!&ndash;<nav>&ndash;&gt;-->
-  <!--&lt;!&ndash;<li><strong>首页</strong></li>&ndash;&gt;-->
-  <!--&lt;!&ndash;<li style="background-color: #fc6a15"><strong>平台介绍</strong></li>&ndash;&gt;-->
-  <!--&lt;!&ndash;<li><strong>特色产品</strong></li>&ndash;&gt;-->
-  <!--&lt;!&ndash;<li><strong>联系我们</strong></li>&ndash;&gt;-->
-  <!--&lt;!&ndash;<li style="width: 200px;height:44px;background-color: white;border: #f9872a solid"><img&ndash;&gt;-->
-  <!--&lt;!&ndash;src="../assets/emslogo.jpg" height="44px"/>&ndash;&gt;-->
-  <!--&lt;!&ndash;</li>&ndash;&gt;-->
-  <!--&lt;!&ndash;</nav>&ndash;&gt;-->
-  <!--</div>-->
-
-  <!--<div id="roll">-->
-  <!--<el-carousel height="800px">-->
-  <!--<el-carousel-item v-for="item in img1" :key="item">-->
-  <!--<img :src="item.url" height="100%" width="100%">-->
-  <!--</el-carousel-item>-->
-  <!--</el-carousel>-->
-  <!--</div>-->
 
   <div style="; width:100%;height:100%;margin:0px;position: relative ">
     <img src="../assets/首页.png" width="100%"/>
@@ -120,20 +52,38 @@
           >
           </el-alert>
         </div>
+        <button type="button">hi</button>
+        <p>niaho</p>
       </center>
 
     </div>
 
   </div>
   <script type="application/javascript">
-
+    // import $ from 'jquery'
 
     function s1() {
       var tx1 = document.getElementById("t1");
       tx1.style.display = "block";
     }
 
-    //
+    function open1() {
+      this.$alert('这是一段内容', '标题名称', {
+        confirmButtonText: '确定',
+        callback: action => {
+          this.$message({
+            type: 'info',
+            message: 'action: ${ action }'
+          });
+        }
+      });
+    }
+
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("p").hide();
+      });
+    });
 
 
   </script>
@@ -143,7 +93,7 @@
 </template>
 
 <script type="application/javascript">
-  import $ from 'jquery'
+
 
   export default {
     data() {
@@ -158,18 +108,6 @@
         // ]
       }
       methods: {
-        open1()
-        {
-          this.$alert('这是一段内容', '标题名称', {
-            confirmButtonText: '确定',
-            callback: action => {
-              this.$message({
-                type: 'info',
-                message: `action: ${ action }`
-              });
-            }
-          });
-        }
 
         // }
         // open2()

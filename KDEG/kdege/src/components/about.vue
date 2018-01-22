@@ -53,6 +53,7 @@
                  :zoom="12"
                  :scroll-wheel-zoom="true"
                  style="height: 600px">
+
         <bm-marker :position="{lng: 121.462991,lat:31.259954}" title="不夜城商务圈投揽部:沪太路129号4楼"
                    animation="BMAP_ANIMATION_BOUNCE"></bm-marker>
         <bm-marker :position="{lng:121.510596,lat:31.261789}" title="北外滩商务圈投揽部:公平路462号"
