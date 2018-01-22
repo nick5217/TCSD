@@ -1,67 +1,67 @@
 <template>
   <body>
+  <my-header></my-header>
+  <!--<div class="all" style="z-index: -10">-->
+  <!--<div id="hd" style="align-content: center">-->
+  <!--&lt;!&ndash;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&ndash;&gt;-->
+  <!--&lt;!&ndash;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&ndash;&gt;-->
+  <!--&lt;!&ndash;<img src="../assets/横板Logo（小）.png" width="30%" height="30%"/>&ndash;&gt;-->
+  <!--&lt;!&ndash;<span&ndash;&gt;-->
+  <!--&lt;!&ndash;style="font-style: italic;font-size: 40px;;display: inline-block;;margin-bottom: 10px"><strong>新时代即时递寄递平台</strong>&ndash;&gt;-->
+  <!--&lt;!&ndash;</span>&ndash;&gt;-->
+  <!--<img src="../assets/新logo.png" width="100%"/>-->
+  <!--</div>-->
 
-  <div class="all" style="z-index: -10">
-    <div id="hd" style="align-content: center">
-      <!--&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;-->
-      <!--&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;-->
-      <!--<img src="../assets/横板Logo（小）.png" width="30%" height="30%"/>-->
-      <!--<span-->
-      <!--style="font-style: italic;font-size: 40px;;display: inline-block;;margin-bottom: 10px"><strong>新时代即时递寄递平台</strong>-->
-      <!--</span>-->
-      <img src="../assets/新logo.png" width="100%"/>
-    </div>
+  <!--<el-menu :default-active="activeIndex2"-->
+  <!--class="el-menu-demo"-->
+  <!--mode="horizontal"-->
+  <!--@select="handleSelect"-->
+  <!--background-color=""-->
+  <!--text-color="black"-->
+  <!--active-text-color="#f9872a"-->
+  <!--style="margin-bottom: 20px">-->
+  <!--<el-menu-item index="1">首页</el-menu-item>-->
+  <!--<el-submenu index="2">-->
+  <!--<template slot="title">-->
+  <!--<router-link to="/intrdc" style="text-decoration: none;color: black">产品介绍</router-link>-->
+  <!--</template>-->
+  <!--<el-menu-item index="2-1">E速达</el-menu-item>-->
+  <!--<el-menu-item index="2-2">定制配</el-menu-item>-->
+  <!--<el-menu-item index="2-3">E直达</el-menu-item>-->
+  <!--<el-menu-item index="2-4">第三方</el-menu-item>-->
+  <!--</el-submenu>-->
+  <!--<el-submenu index="3">-->
+  <!--<template slot="title">-->
+  <!--<router-link to="/about" style="text-decoration: none;color: black">关于我们</router-link>-->
+  <!--</template>-->
+  <!--<el-menu-item index="3-1">-->
+  <!--公司介绍-->
+  <!--</el-menu-item>-->
+  <!--<el-menu-item index="3-2">-->
+  <!--联系我们-->
+  <!--</el-menu-item>-->
+  <!--<el-menu-item index="3-3">-->
+  <!--站点分布-->
+  <!--</el-menu-item>-->
 
-    <el-menu :default-active="activeIndex2"
-             class="el-menu-demo"
-             mode="horizontal"
-             @select="handleSelect"
-             background-color=""
-             text-color="black"
-             active-text-color="#f9872a"
-             style="margin-bottom: 20px">
-      <el-menu-item index="1">首页</el-menu-item>
-      <el-submenu index="2">
-        <template slot="title">
-          <router-link to="/intrdc" style="text-decoration: none;color: black">产品介绍</router-link>
-        </template>
-        <el-menu-item index="2-1">E速达</el-menu-item>
-        <el-menu-item index="2-2">定制配</el-menu-item>
-        <el-menu-item index="2-3">E直达</el-menu-item>
-        <el-menu-item index="2-4">第三方</el-menu-item>
-      </el-submenu>
-      <el-submenu index="3">
-        <template slot="title">
-          <router-link to="/about" style="text-decoration: none;color: black">关于我们</router-link>
-        </template>
-        <el-menu-item index="3-1">
-          公司介绍
-        </el-menu-item>
-        <el-menu-item index="3-2">
-          联系我们
-        </el-menu-item>
-        <el-menu-item index="3-3">
-          站点分布
-        </el-menu-item>
-
-        <el-menu-item index="3-4">第三方</el-menu-item>
-      </el-submenu>
-      <el-menu-item index="4">
-        <router-link to="/interview" style="text-decoration: none;color: black">E哥招募</router-link>
-      </el-menu-item>
-      <el-menu-item index="5"><a href="http://www.ems.com.cn/" style="text-decoration: none">EMS</a>
-      </el-menu-item>
-    </el-menu>
-    <!--<nav>-->
-    <!--<li><strong>首页</strong></li>-->
-    <!--<li style="background-color: #fc6a15"><strong>平台介绍</strong></li>-->
-    <!--<li><strong>特色产品</strong></li>-->
-    <!--<li><strong>联系我们</strong></li>-->
-    <!--<li style="width: 200px;height:44px;background-color: white;border: #f9872a solid"><img-->
-    <!--src="../assets/emslogo.jpg" height="44px"/>-->
-    <!--</li>-->
-    <!--</nav>-->
-  </div>
+  <!--<el-menu-item index="3-4">第三方</el-menu-item>-->
+  <!--</el-submenu>-->
+  <!--<el-menu-item index="4">-->
+  <!--<router-link to="/interview" style="text-decoration: none;color: black">E哥招募</router-link>-->
+  <!--</el-menu-item>-->
+  <!--<el-menu-item index="5"><a href="http://www.ems.com.cn/" style="text-decoration: none">EMS</a>-->
+  <!--</el-menu-item>-->
+  <!--</el-menu>-->
+  <!--&lt;!&ndash;<nav>&ndash;&gt;-->
+  <!--&lt;!&ndash;<li><strong>首页</strong></li>&ndash;&gt;-->
+  <!--&lt;!&ndash;<li style="background-color: #fc6a15"><strong>平台介绍</strong></li>&ndash;&gt;-->
+  <!--&lt;!&ndash;<li><strong>特色产品</strong></li>&ndash;&gt;-->
+  <!--&lt;!&ndash;<li><strong>联系我们</strong></li>&ndash;&gt;-->
+  <!--&lt;!&ndash;<li style="width: 200px;height:44px;background-color: white;border: #f9872a solid"><img&ndash;&gt;-->
+  <!--&lt;!&ndash;src="../assets/emslogo.jpg" height="44px"/>&ndash;&gt;-->
+  <!--&lt;!&ndash;</li>&ndash;&gt;-->
+  <!--&lt;!&ndash;</nav>&ndash;&gt;-->
+  <!--</div>-->
 
   <!--<div id="roll">-->
   <!--<el-carousel height="800px">-->

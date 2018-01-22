@@ -1,45 +1,7 @@
 <template>
   <body>
-  <div class="all">
-    <div id="hd" style="align-content: center">
-      <img src="../assets/新logo.png" width="100%"/></div>
-  </div>
-  <el-menu :default-active="activeIndex2"
-           class="el-menu-demo"
-           mode="horizontal"
-           @select="handleSelect"
-           background-color=""
-           text-color="black"
-           active-text-color="#f9872a"
-           style="margin-bottom: 20px;outline: none">
-    <el-menu-item index="1">
-      <router-link to="/" style="text-decoration: none;color: black">首页</router-link>
-    </el-menu-item>
-    <el-menu-item index="2">
-      <router-link to="/intrdc" style="text-decoration: none;color: black">产品介绍</router-link>
-    </el-menu-item>
-    <!--<template slot="title"></template>-->
-    <!--<el-menu-item index="2-1">E速达</el-menu-item>-->
-    <!--<el-menu-item index="2-2">定制配</el-menu-item>-->
-    <!--<el-menu-item index="2-3">E直达</el-menu-item>-->
-    <!--<el-menu-item index="2-4">第三方</el-menu-item>-->
-    <!--</el-submenu>-->
-    <el-submenu index="3">
-      <template slot="title">关于我们</template>
-      <el-menu-item index="3-1">公司介绍</el-menu-item>
-      <el-menu-item index="3-2">站点分布</el-menu-item>
-      <el-menu-item index="3-3">联系我们</el-menu-item>
+  <my-header></my-header>
 
-      <el-menu-item index="3-4">第三方</el-menu-item>
-    </el-submenu>
-    <el-menu-item index="4">
-      <router-link to="/interview" style="text-decoration: none;color: black">E哥招募</router-link>
-    </el-menu-item>
-    <el-menu-item index="5"><a href="http://www.ems.com.cn/"
-                               style="text-decoration: none">EMS</a>
-    </el-menu-item>
-
-  </el-menu>
   <!--轮播图-->
   <div id="roll">
     <el-carousel height="400px" type="card" style="outline: none">

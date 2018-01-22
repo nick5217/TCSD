@@ -1,39 +1,6 @@
 <template>
   <body>
-  <div class="all">
-    <div id="hd" style="align-content: center">
-      <img src="../assets/新logo.png" width="100%"/></div>
-  </div>
-  <el-menu :default-active="activeIndex2"
-           class="el-menu-demo"
-           mode="horizontal"
-           @select="handleSelect"
-           background-color=""
-           text-color="black"
-           active-text-color="#f9872a"
-           style="margin-bottom: 20px">
-    <el-menu-item index="1">
-      <router-link to="/" style="text-decoration: none;color: black">首页</router-link>
-    </el-menu-item>
-    <el-menu-item index="2">产品介绍</el-menu-item>
-
-
-    <el-submenu index="3">
-      <template slot="title">
-        <router-link to="/about" style="text-decoration: none;color: black">关于我们</router-link>
-      </template>
-      <el-menu-item index="3-1">公司介绍</el-menu-item>
-      <el-menu-item index="3-2">联系我们</el-menu-item>
-      <el-menu-item index="3-3">站点分布</el-menu-item>
-      <el-menu-item index="3-4">第三方</el-menu-item>
-    </el-submenu>
-    <el-menu-item index="4">
-      <router-link to="/interview" style="text-decoration: none;color: black">E哥招募</router-link>
-    </el-menu-item>
-    <el-menu-item index="5"><a href="http://www.ems.com.cn/"
-                               style="text-decoration: none">EMS</a>
-    </el-menu-item>
-  </el-menu>
+<my-header></my-header>
 
   <img src="../assets/XREU9272.jpg" width="100%"/>
   <div id="introduce">
