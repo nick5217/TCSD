@@ -5,15 +5,15 @@ import App from './App'
 import router from './router'
 import BaiduMap from 'vue-baidu-map'
 import ElementUI from 'element-ui'
-// import jQuery from 'jquery'
-
+import  'jquery'
 import '../theme/index.css'
+
 // import BaiduMap from 'vue-baidu-map'
 // import 'element-ui/lib/theme-chalk/index.css'
 // import "assets/jqueryLbt/scripts/carousel.js"
 // import "assets/jqueryLbt/scripts/jquery.min.js"
 // import "assets/jqueryLbt/css/style.css"
-// import $ from 'jquery'
+import $ from 'jquery'
 // import jQuery from 'jquery'
 Vue.component('my-footer',
   {

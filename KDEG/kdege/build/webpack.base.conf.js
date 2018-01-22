@@ -9,7 +9,6 @@ function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
-
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
@@ -86,8 +85,10 @@ module.exports = {
   plugins: [
     // new webpack.optimize.CommonsChunkPlugin('common.js'),
     new webpack.ProvidePlugin({
+      $: "jquery",
       jQuery: "jquery",
-      $: "jquery"
+      jquery: "jquery",
+      "window.jQuery": "jquery"
     })
   ]
 

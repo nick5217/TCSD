@@ -157,7 +157,7 @@
 
     </el-tab-pane>
   </el-tabs>
-<my-footer></my-footer>
+  <my-footer></my-footer>
   </body>
 </template>
 <script>

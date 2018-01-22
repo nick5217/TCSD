@@ -104,7 +104,7 @@
           <el-dropdown-item>第三方</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
-      <br><br>
+      <br>
       <center>
         <button class="btn btn-success btn-lg"
                 style="outline: none;vertical-align: center"
@@ -126,7 +126,7 @@
 
   </div>
   <script type="application/javascript">
-    // import $ from 'jquery'
+
 
     function s1() {
       var tx1 = document.getElementById("t1");
@@ -134,17 +134,7 @@
     }
 
     //
-    // function open1() {
-    //   this.$alert('这是一段内容', '标题名称', {
-    //     confirmButtonText: '确定',
-    //     callback: action => {
-    //       this.$message({
-    //         type: 'info',
-    //         message: `action: ${ action }`
-    //       });
-    //     }
-    //   });
-    // }
+
 
   </script>
   <my-footer></my-footer>
@@ -153,7 +143,7 @@
 </template>
 
 <script type="application/javascript">
-
+  import $ from 'jquery'
 
   export default {
     data() {
@@ -170,26 +160,30 @@
       methods: {
         open1()
         {
-          this.$alert('您的邮费为15元', '尊敬的用户', {
-            confirmButtonText: 'OK',
-
+          this.$alert('这是一段内容', '标题名称', {
+            confirmButtonText: '确定',
+            callback: action => {
+              this.$message({
+                type: 'info',
+                message: `action: ${ action }`
+              });
+            }
           });
-
-
-          // }
-          // open2()
-          // {
-          //   this.$message({
-          //     message: '恭喜你，这是一条成功消息',
-          //     type: 'success'
-          //   });
-          // }
-
         }
+
+        // }
+        // open2()
+        // {
+        //   this.$message({
+        //     message: '恭喜你，这是一条成功消息',
+        //     type: 'success'
+        //   });
+        // }
+
       }
-
-
     }
+
+
   }
 
 </script>
@@ -290,8 +284,9 @@
 
   #guess {
     position: absolute;
-    top: 1300px;
+    top: 1296px;
     left: 20%;
+    padding-top: 0px;
   }
 
   #t1 {
