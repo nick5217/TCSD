@@ -1,3 +1,4 @@
+<!--产品介绍页面-->
 <template>
   <body>
   <my-header></my-header>
@@ -5,6 +6,7 @@
   <img src="../assets/XREU9272.jpg" width="100%"/>
   <div id="introduce">
     <hr>
+    <!--菜单栏模块-->
     <el-tabs :tab-position="tabPosition1" style="height: 5000px">
       <el-tab-pane label="E速达">
 
@@ -82,7 +84,7 @@
 
 
       </el-tab-pane>
-
+      <!--操作指南模块-->
       <el-tab-pane label="操作指南">
         <div style=";margin-left: 40px">
           <!--<ul class="nav nav-pills">-->
@@ -145,6 +147,7 @@
         activeIndex: '2',
         activeIndex2: '2',
         tabPosition1: "left",
+        //这块是价目表的数据
         table1: [{
           id: 1,
           type: "E速达",

@@ -1,16 +1,20 @@
+
+<!--首页-->
 <template>
   <body>
   <my-header></my-header>
-  <div style="; width:100%;height:100%;margin:0px;position: relative ">
-    <img src="../assets/首页.png" width="100%" style="margin-top: 0px"/>
-    <el-button type="warning" style="position: absolute;left: 46.2%" onclick="window.open('http://admin.ksudi.com')">
+  <div style="; width:100%;height:100%;margin:0px;position: relative ">//全部的东西
+    <img src="../assets/首页.png" width="100%" style="margin-top: 0px"/>//首页的图片 by刘千羽
+    <el-button type="warning" style="position: absolute;left: 46.2%" onclick="window.open('http://admin.ksudi.com')">//这个是下单的按钮 在中间，链接是快速递做的登陆页面
       E键下单
     </el-button>
     <el-button type="warning"
                style="outline: none;position: absolute;top:3790px;left: 7%;color: white;text-decoration: none">
-      <router-link to="/interview" style="color: white;text-decoration: none">加入我们</router-link>
+      <router-link to="/interview" style="color: white;text-decoration: none">加入我们</router-link>//这个是放在二维码上的加入按钮，点击跳到招募页面
     </el-button>
-    <video src="../assets/宣传视频.mp4" width="40%" controls="controls"></video>
+    <video src="../assets/宣传视频.mp4" width="40%" controls="controls"></video>//宣传视频
+
+    <!--预估邮价的部分 在页面中间-->
     <div id="guess" style="vertical-align: center">
       &nbsp&nbsp
       &nbsp&nbsp
@@ -41,6 +45,7 @@
                 onclick="s1()">预估邮费
         </button>
         <br>
+        <!--暂时的假数据-->
         <div id="t1">
           <el-alert
             title="您的邮费为 15 元"
@@ -56,7 +61,7 @@
     </div>
   </div>
   <script type="application/javascript">
-    import $ from 'jquery'
+    // import $ from 'jquery'
 
     function s1() {
       var tx1 = document.getElementById("t1");

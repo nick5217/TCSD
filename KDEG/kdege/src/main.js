@@ -7,7 +7,7 @@ import BaiduMap from 'vue-baidu-map'
 import ElementUI from 'element-ui'
 import '../node_modules/jquery'
 import '../theme/index.css'
-import  '../node_modules/jquery/dist/jquery.min'
+import '../node_modules/jquery/dist/jquery.min'
 import $ from 'jquery'
 // import BaiduMap from 'vue-baidu-map'
 // import 'element-ui/lib/theme-chalk/index.css'
@@ -91,11 +91,14 @@ Vue.component('my-header', {
 
 
 })
+
+//站点模块用到的组件
 Vue.use(BaiduMap, {
   // ak 是在百度地图开发者平台申请的密钥 详见 http://lbsyun.baidu.com/apiconsole/key */
   ak: 'kQlPNojGEe6lIWbrdkx65izorYEIaVTC'
 })
-Vue.use(ElementUI)
+
+Vue.use(ElementUI)//element ui 用到的
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({

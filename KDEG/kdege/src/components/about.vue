@@ -1,3 +1,5 @@
+
+<!--这块是介绍上海分公司的-->
 <template>
   <body>
   <my-header></my-header>
@@ -13,7 +15,7 @@
   <hr>
   <!--轮播图-->
 
-
+<!--菜单栏模块-->
   <el-tabs :tab-position="tabPosition" style="height: 2000px;" type="card">
     <el-tab-pane label="公司介绍"><pre>
                                 中国邮政速递物流股份有限公司上海市分公司简介
@@ -46,6 +48,7 @@
 
     </pre>
     </el-tab-pane>
+    <!--站点分布模块-->
     <el-tab-pane label="站点分布">
       <baidu-map class="bm-view"
                  :center="{
@@ -77,6 +80,8 @@
 
       </baidu-map>
     </el-tab-pane>
+
+    <!--联系方式模块-->
     <el-tab-pane label=" 联系我们">
       <div id="intr" style="display: inline;width: 600px">
         <el-card class="box-card">
@@ -136,7 +141,7 @@
         activeIndex2: '3',
         tabPosition: 'left',
         type: 'card',
-
+        //轮播图照片
         img1: [{url: require('../assets/ems图片1.jpeg')},
           {url: require('../assets/ems图片2.jpg')},
           {url: require('../assets/快递e哥启动仪式/快递E哥产品启动仪式02.jpg')},
