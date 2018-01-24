@@ -1,10 +1,8 @@
 <template>
   <body>
   <my-header></my-header>
-
-
   <div style="; width:100%;height:100%;margin:0px;position: relative ">
-    <img src="../assets/首页.png" width="100%"/>
+    <img src="../assets/首页.png" width="100%" style="margin-top: 0px"/>
     <el-button type="warning" style="position: absolute;left: 46.2%" onclick="window.open('http://admin.ksudi.com')">
       E键下单
     </el-button>
@@ -51,21 +49,22 @@
             show-icon
           >
           </el-alert>
+
         </div>
-        <button type="button">hi</button>
-        <p>niaho</p>
+
       </center>
-
     </div>
-
   </div>
   <script type="application/javascript">
-    // import $ from 'jquery'
+    import $ from 'jquery'
 
     function s1() {
       var tx1 = document.getElementById("t1");
       tx1.style.display = "block";
     }
+  </script>
+  <script type="application/javascript">
+    import $ from 'jquery'
 
     function open1() {
       this.$alert('这是一段内容', '标题名称', {
@@ -117,7 +116,11 @@
         //     type: 'success'
         //   });
         // }
-
+        $(document).ready(function () {
+          $("button").click(function () {
+            $("p").hide();
+          });
+        });
       }
     }
 

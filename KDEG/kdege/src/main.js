@@ -21,15 +21,14 @@ Vue.component('my-footer',
 
     '<strong>"快递E哥"即时平台</strong>' +
     '&nbsp;&nbsp;&nbsp;Tel:56986113   E-mail:emskdge@163.com' +
-
     '&nbsp;&nbsp;&nbsp;<strong>上海邮政速递物流</strong>' +
     '&nbsp;&nbsp;&nbsp;Tel:（021）63936666   E-mail:webmaster@shpost.com.cn' +
     '</div>'
   }
 )
 Vue.component('my-header', {
-  template: ' <div class="all" style="z-index: -10">\n' +
-  '    <div id="hd" style="align-content: center">\n' +
+  template: ' <div class="all" style="z-index: -10;">\n' +
+  '    <div id="hd" style="align-content: center;">\n' +
   '      <!--&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;-->\n' +
   '      <!--&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;-->\n' +
   '      <!--<img src="../assets/横板Logo（小）.png" width="30%" height="30%"/>-->\n' +
@@ -46,7 +45,7 @@ Vue.component('my-header', {
   '             background-color=""\n' +
   '             text-color="black"\n' +
   '             active-text-color="#f9872a"\n' +
-  '             style="margin-bottom: 20px">\n' +
+  '             style="margin-bottom: 0px">\n' +
   '      <el-menu-item index="1"> <router-link to="/" style="text-decoration: none;color: black">首页</router-link></el-menu-item>\n' +
   '      <el-submenu index="2">\n' +
   '        <template slot="title">\n' +
