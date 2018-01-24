@@ -13,39 +13,70 @@
   </style>
   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=kQlPNojGEe6lIWbrdkx65izorYEIaVTC"></script>
   <title>计算驾车时间与距离</title>
+
 </head>
 <body>
-起点:<input type="text" placeholder="输入地址" id="start" value="1">
-终点:<input type="text" placeholder="输入地址" id="end" value="sa">
-<button onclick="alert(plan.getDistance)">check</button>
-<div id="allmap" style="display:none"></div>
+起点:<input type="text" placeholder="输入地址" id="start" value="上海">
+终点:<input type="text" placeholder="输入地址" id="end" value="北京">
+<button onclick="s1()">check</button>
+<div id="allmap" style=""></div>
 </body>
-</html>
 <script type="text/javascript">
   // 百度地图API功能
-  var s = document.getElementById("start");
-  var e = document.getElementById("end");
-  transit.search("s.value", "e.value");
-  var map = new BMap.Map("allmap");
-  map.centerAndZoom(new BMap.Point(116.404, 39.915), 12);
-  var output = "从上地到西单驾车需要";
-  var searchComplete = function (results){
-    if (transit.getStatus() != BMAP_STATUS_SUCCESS) {
-      return;
-    }
-    var plan = results.getPlan(0);
-    output += plan.getDuration(true) + "\n";                //获取时间
-    output += "总路程为：";
-    output += plan.getDistance(true) + "\n";           //获取距离
+  var map = new BMap.Map("allmap")
+  map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+  map.enableContinuousZoom();
+  var myGeo = new BMap.Geocoder();
+
+
+  var pointA, pointB;
+
+
+  function s1() {
+    // var dis =map.getDistance(pointA, pointB)[0];
+    var s = document.getElementById("start");
+    var e = document.getElementById("end");
+    myGeo.getPoint(s.value, function (point) {
+      map.centerAndZoom(point, 16);
+      map.addOverlay(new BMap.Marker(point));
+      pointA = point;
+      myGeo.getPoint(e.value, function (point) {
+        map.centerAndZoom(point, 16);
+        map.addOverlay(new BMap.Marker(point));
+        pointB = point;
+        alert("距离"+(map.getDistance(pointA, pointB)).toFixed(2))
+      }, "上海市")
+    }, "上海市");
+    //
+    // alert(s.value)
+    // alert(myGeo.getPoint(s.value));
+
   }
-  var transit = new BMap.DrivingRoute(map, {
-    renderOptions: {map: map},
-    onSearchComplete: searchComplete,
-    onPolylinesSet: function () {
-      setTimeout(function () {
-        alert(output)
-      }, "1000");
-    }
-  });
+
+
+  // transit.search(s.value, e.value);
+  // var map = new BMap.Map("allmap");
+  // map.centerAndZoom(new BMap.Point(116.404, 39.915), 12);
+  // var output = "从上地到西单驾车需要";
+  // var searchComplete = function (results) {
+  //   if (transit.getStatus() != BMAP_STATUS_SUCCESS) {
+  //     return;
+  //   }
+  //   var plan = results.getPlan(0);
+  //   output += plan.getDuration(true) + "\n";                //获取时间
+  //   output += "总路程为：";
+  //   output += plan.getDistance(true) + "\n";           //获取距离
+  // }
+  // var transit = new BMap.DrivingRoute(map, {
+  //   renderOptions: {map: map},
+  //   onSearchComplete: searchComplete,
+  //   onPolylinesSet: function () {
+  //     setTimeout(function () {
+  //       alert(output)
+  //     }, "1000");
+  //   }
+  // });
 
 </script>
+</html>
+
