@@ -23,11 +23,11 @@ export default new Router({
       name: 'home',
       component: home
     },
-    {
-      path:'/header',
-      name:'header',
-      component:header
-    },
+    // {
+    //   path:'/header',
+    //   name:'header',
+    //   component:header
+    // },
     {
       path: '/intrdc',
       name: 'intrdc',
