@@ -49,12 +49,12 @@
       <br>
       <button class="btn btn-success btn-lg"
               style="outline: none;position: absolute;left: 40.2%"
-              @click="visible=true">预估邮费
+              onclick="open">预估邮费
       </button>
       <br>
       <!--暂时的假数据-->
       <el-dialog :visible.sync="visible" title="Hello world">
-        <p v-model="stri">邮费为xx元</p>
+        <p>邮费为xx元</p>
       </el-dialog>
       <div id="t1">
         <el-alert
@@ -70,54 +70,54 @@
 
     </div>
   </div>
-  <script type="application/javascript">
-    // import $ from 'jquery'
-    var map = new BMap.Map("allmap")
-    map.enableScrollWheelZoom();//启用滚轮放大缩小，默认禁用
-    map.enableContinuousZoom();
-    var myGeo = new BMap.Geocoder();
-    var stri;
-    var pointA, pointB;
-    var price;
-    var price1, price2;
+  <!--<script type="application/javascript">-->
+  <!--// import $ from 'jquery'-->
+  <!--var map = new BMap.Map("allmap")-->
+  <!--map.enableScrollWheelZoom();//启用滚轮放大缩小，默认禁用-->
+  <!--map.enableContinuousZoom();-->
+  <!--var myGeo = new BMap.Geocoder();-->
+  <!--var stri;-->
+  <!--var pointA, pointB;-->
+  <!--var price;-->
+  <!--var price1, price2;-->
 
-    function s2() {
-      // var dis =map.getDistance(pointA, pointB)[0];
-      var s = document.getElementById("start");
-      var e = document.getElementById("end");
-      var w = document.getElementById("weight").value;
+  <!--function s2() {-->
+  <!--// var dis =map.getDistance(pointA, pointB)[0];-->
+  <!--var s = document.getElementById("start");-->
+  <!--var e = document.getElementById("end");-->
+  <!--var w = document.getElementById("weight").value;-->
 
-      myGeo.getPoint(s.value, function (point) {
-        pointA = point;
-        myGeo.getPoint(e.value, function (point) {
-          pointB = point;
-          var dis = (map.getDistance(pointA, pointB)).toFixed(2);
-          // /到这边为止是得到了所有计算所需的变量了，下面开始计算
-          if (w > 3 && w <= 10) {
-            price1 = (w - 3) * 2;
-          }
-          else if (w > 10) {
-            price1 = 14 + (w - 10) * 5;
-          }
-          else {
-            price1 = 0
-          }
-          if (dis > 3000) {
-            price2 = (dis - 3000) / 1000 * 2;
-          } else {
-            price2 = 0
-          }
-          price = (price1 + price2 + 10).toFixed(2);
-          stri = "邮费为" + (price) + "元"
-          var tx1 = document.getElementById("t1");
-          tx1.style.display = "block";
-          alert(stri);
-        }, "上海市")
-      }, "上海市")
-    }
+  <!--myGeo.getPoint(s.value, function (point) {-->
+  <!--pointA = point;-->
+  <!--myGeo.getPoint(e.value, function (point) {-->
+  <!--pointB = point;-->
+  <!--var dis = (map.getDistance(pointA, pointB)).toFixed(2);-->
+  <!--// /到这边为止是得到了所有计算所需的变量了，下面开始计算-->
+  <!--if (w > 3 && w <= 10) {-->
+  <!--price1 = (w - 3) * 2;-->
+  <!--}-->
+  <!--else if (w > 10) {-->
+  <!--price1 = 14 + (w - 10) * 5;-->
+  <!--}-->
+  <!--else {-->
+  <!--price1 = 0-->
+  <!--}-->
+  <!--if (dis > 3000) {-->
+  <!--price2 = (dis - 3000) / 1000 * 2;-->
+  <!--} else {-->
+  <!--price2 = 0-->
+  <!--}-->
+  <!--price = (price1 + price2 + 10).toFixed(2);-->
+  <!--stri = "邮费为" + (price) + "元"-->
+  <!--var tx1 = document.getElementById("t1");-->
+  <!--tx1.style.display = "block";-->
+  <!--alert(stri);-->
+  <!--}, "上海市")-->
+  <!--}, "上海市")-->
+  <!--}-->
 
-    visible = true;
-  </script>
+  <!--visible = true;-->
+  <!--</script>-->
 
   <my-footer></my-footer>
   </body>
@@ -125,7 +125,23 @@
 </template>
 
 <script type="application/javascript">
-
+  var Main = {
+    methods: {
+      open() {
+        this.$alert('这是一段内容', '标题名称', {
+          confirmButtonText: '确定',
+          callback: action => {
+            this.$message({
+              type: 'info',
+              message: `action: ${ action }`
+            });
+          }
+        });
+      }
+    }
+  }
+  var Ctor = Vue.extend(Main)
+  new Ctor().$mount('#guess')
 
   export default {
     data() {
@@ -133,11 +149,23 @@
       return {
         activeIndex: '1',
         activeIndex2: '1',
-        visible: false
+        visible: true
       }
       methods: {
-
+        open()
+        {
+          this.$alert('这是一段内容', '标题名称', {
+            confirmButtonText: '确定',
+            callback: action => {
+              this.$message({
+                type: 'info',
+                message: `action: ${ action }`
+              });
+            }
+          });
+        }
       }
+
 
     }
 
