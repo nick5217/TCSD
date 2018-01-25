@@ -7,6 +7,17 @@
   <link rel="shortcut icon" href="../src/assets/favicon  .ico" type="image/x-icon">
 </head>
 <body>
+<div id="app">
+  <input v-model="val" v-on:keypress.enter="addToList">
+  <ul>
+    <li v-for="val in values">
+      {{val.val}}
+      <input type="button" value="删除" v-on:click="removeList($index)"/>
+    </li>
+  </ul>
+</div>
+
+
 <div id="guess">
   <button onclick="s()">show</button>
 </div>
@@ -21,6 +32,26 @@
 </body>
 <script type="application/javascript">
   // import vue from 'Vue'
+  new Vue({
+    el: '#app',
+    data: {
+      val: "1",
+      values: []
+    },
+    methods: {
+      addToList: function () {
+        var val = parseInt(this.val.trim());  //注意，因为当上面的val是字符串类型的时候，才能用trim()，如果是数字类型，则用this.val
+        if (val) {
+          this.values.push({val: val});
+        }
+        this.val = String(val + 1);
+      },
+      removeList: function (index) {
+        this.values.splice(index, 1);
+      }
+    }
+  })
+  //例子1
   var t2 = document.getElementById("t1");
 
   function s() {

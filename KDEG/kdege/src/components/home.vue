@@ -23,13 +23,13 @@
       &nbsp&nbsp
       &nbsp&nbsp
       寄件地址:&nbsp&nbsp
-      <el-input placeholder="请输入地址" style="width: 12%" value="" id="start"></el-input>
+      <el-input placeholder="请输入地址" style="width: 12%" value="" id="start" v-model="start1"></el-input>
       &nbsp&nbsp
       收件地址:&nbsp&nbsp;
-      <el-input placeholder="请输入地址" style="width: 12%" value="" id="end"></el-input>
+      <el-input placeholder="请输入地址" style="width: 12%" value="" id="end" v-model="end1"></el-input>
       &nbsp&nbsp
       重量（公斤）:&nbsp&nbsp;
-      <el-input placeholder="请输入重量" style="width: 12%" value="" id="weighth"></el-input>
+      <el-input placeholder="请输入重量" style="width: 12%" value="" id="weight" v-model="weighth1"></el-input>
       <!--<br><br>-->
       <!--&nbsp&nbsp&nbsp&nbsp-->
       &nbsp&nbsp
@@ -47,8 +47,6 @@
         </el-dropdown-menu>
       </el-dropdown>
       <br>
-
-
       <button class="btn btn-success btn-lg"
               style="outline: none;position: absolute;left: 40.2%"
               onclick="s2()">预估邮费
@@ -57,7 +55,7 @@
       <!--暂时的假数据-->
       <div id="t1">
         <el-alert
-          :title="title1"
+          :title="stri"
           type="success"
           center
           show-icon
@@ -78,43 +76,34 @@
     var stri;
     var pointA, pointB;
     var price;
+    var price1, price2;
 
     function s2() {
       // var dis =map.getDistance(pointA, pointB)[0];
       var s = document.getElementById("start");
       var e = document.getElementById("end");
-      var w = document.getElementById("weight");
+      var w = document.getElementById("weight").value;
 
       myGeo.getPoint(s.value, function (point) {
-        map.centerAndZoom(point, 16);
-        map.addOverlay(new BMap.Marker(point));
         pointA = point;
         myGeo.getPoint(e.value, function (point) {
-          map.centerAndZoom(point, 16);
-          map.addOverlay(new BMap.Marker(point));
           pointB = point;
-          // alert("距离"+(map.getDistance(pointA, pointB)).toFixed(2))
           var dis = (map.getDistance(pointA, pointB)).toFixed(2);
-
-
+          // /到这边为止是得到了所有计算所需的变量了，下面开始计算
           if (w > 3 && w <= 10) {
-            // price1= 3000 * 10 + (dis - 3000) * 2
             price1 = (w - 3) * 2;
-            if (W > 10) {
+            if (w > 10) {
               price1 = 14 + (w - 10) * 5;
             }
-
-
           } else {
             price1 = 0
-
           }
           if (dis > 3000) {
-            price2 = (dis - 3000) * 2;
+            price2 = (dis - 3000) / 1000 * 2;
           } else {
             price2 = 0
           }
-          price = price1 + price2 + 10;
+          price = (price1 + price2 + 10).toFixed(2);
           stri = "邮费为" + (price) + "元"
           var tx1 = document.getElementById("t1");
           tx1.style.display = "block";
@@ -134,17 +123,10 @@
 
   export default {
     data() {
-      title1: stri
+      //data里的都是初值
       return {
         activeIndex: '1',
         activeIndex2: '1',
-
-        // img1: [{url: require('../assets/快递e哥启动仪式/何放-陈斌合影（20171101）.jpg')},
-        //   {url: require('../assets/快递e哥启动仪式/快递E哥产品启动仪式01.jpg')},
-        //   {url: require('../assets/快递e哥启动仪式/快递E哥产品启动仪式02.jpg')},
-        //   {url: require('../assets/快递e哥启动仪式/快递E哥产品启动仪式03.jpg')},
-        //   {url: require('../assets/快递e哥启动仪式/快递E哥产品启动仪式04.jpg')}
-        // ]
       }
       methods: {
 
