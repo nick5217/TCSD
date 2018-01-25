@@ -49,10 +49,13 @@
       <br>
       <button class="btn btn-success btn-lg"
               style="outline: none;position: absolute;left: 40.2%"
-              onclick="s2()">预估邮费
+              @click="visible=true">预估邮费
       </button>
       <br>
       <!--暂时的假数据-->
+      <el-dialog :visible.sync="visible" title="Hello world">
+        <p v-model="stri">邮费为xx元</p>
+      </el-dialog>
       <div id="t1">
         <el-alert
           :title="stri"
@@ -92,10 +95,11 @@
           // /到这边为止是得到了所有计算所需的变量了，下面开始计算
           if (w > 3 && w <= 10) {
             price1 = (w - 3) * 2;
-            if (w > 10) {
-              price1 = 14 + (w - 10) * 5;
-            }
-          } else {
+          }
+          else if (w > 10) {
+            price1 = 14 + (w - 10) * 5;
+          }
+          else {
             price1 = 0
           }
           if (dis > 3000) {
@@ -111,6 +115,8 @@
         }, "上海市")
       }, "上海市")
     }
+
+    visible = true;
   </script>
 
   <my-footer></my-footer>
@@ -127,6 +133,7 @@
       return {
         activeIndex: '1',
         activeIndex2: '1',
+        visible: false
       }
       methods: {
 
