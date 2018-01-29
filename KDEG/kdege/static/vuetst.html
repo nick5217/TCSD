@@ -7,17 +7,6 @@
   <link rel="shortcut icon" href="../src/assets/favicon  .ico" type="image/x-icon">
 </head>
 <body>
-<div id="app">
-  <input v-model="val" v-on:keypress.enter="addToList">
-  <ul>
-    <li v-for="val in values">
-      {{val.val}}
-      <input type="button" value="删除" v-on:click="removeList($index)"/>
-    </li>
-  </ul>
-</div>
-
-
 <div id="guess">
   <button onclick="s()">show</button>
 </div>
@@ -29,35 +18,61 @@
   <input type="text" placeholder="hello" v-model="m1">
   <input type="text" placeholder="hello" v-model="m1">
 </div>
+
+<div id="t4" v-bind:style="color:color3">
+  <p>{{m2}}</p>
+  <p>{{rem2}}</p>
+  <p>问个问题：</p>
+  <input v-model="question">
+  <p>{{answer}}</p>
+  <input type="radio" name="sex" v-model="color1" value=true>
+  <input type="radio" name="sex" v-model="color1">
+  <p>你选了{{color1}}</p>
+</div>
 </body>
 <script type="application/javascript">
-  // import vue from 'Vue'
   new Vue({
-    el: '#app',
-    data: {
-      val: "1",
-      values: []
-    },
-    methods: {
-      addToList: function () {
-        var val = parseInt(this.val.trim());  //注意，因为当上面的val是字符串类型的时候，才能用trim()，如果是数字类型，则用this.val
-        if (val) {
-          this.values.push({val: val});
-        }
-        this.val = String(val + 1);
+    el: '#t4',
+    data:
+      {
+        m2: 'hell',
+        question: '',
+        answer: '',
+        sex1: '',
+        answer1: '',
+        color2: 'color',
+        color1: '',
+        size2: 'size',
+        color3: "red"
+
       },
-      removeList: function (index) {
-        this.values.splice(index, 1);
+    watch: {
+      question: function () {
+        this.answer = "问你麻痹"
+      },
+      sex1: function () {
+        if (this.sex1 == 1) {
+          this.answer1 = 1;
+        }
+        else {
+          this.answer1 = 2;
+        }
       }
+    },
+    computed: {
+      rem2:
+        function () {
+          return this.m2.split('').reverse().join('');
+        }
     }
   })
+  // import vue from 'Vue'
   //例子1
   var t2 = document.getElementById("t1");
 
   function s() {
     t2.style.display = "block"
   }
-
 
   new Vue({
     el: '#t3',
@@ -71,9 +86,15 @@
 <style>
   #t1 {
     display: none;
-
   }
 
+  .color {
+    color: red;
+  }
 
+  .size {
+    font-size: larger;
+
+  }
 </style>
 </html>
