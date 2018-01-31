@@ -1,4 +1,3 @@
-
 <!--这块是介绍上海分公司的-->
 <template>
   <body>
@@ -15,7 +14,7 @@
   <hr>
   <!--轮播图-->
 
-<!--菜单栏模块-->
+  <!--菜单栏模块-->
   <el-tabs :tab-position="tabPosition" style="height: 2000px;" type="card">
     <el-tab-pane label="公司介绍"><pre>
                                 中国邮政速递物流股份有限公司上海市分公司简介
@@ -44,10 +43,54 @@
       案，提供基于供应链管理的，包括仓储、封装、配送、加工、理货、运输和信息服务于一体的综
       合物流服务。
 
-
-
     </pre>
+
     </el-tab-pane>
+
+    <!--主打产品模块-->
+
+    <el-tab-pane label="主打产品">
+      <!--申鲜邮-->
+      <!--<img src="../../static/申图片.jpg"/>-->
+      <div id="project">
+        <div class="card" style="width: 33%">
+          <img class="card-img-top" src="../../static/申图片.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">"申鲜邮"平台</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.Some quick example text to build on the card title and make up the bulk of the card's
+              content.Some quick example text to build on the card title and make up the bulk of the card's
+              content.Some quick example text to build on the card title and make up the bulk of the card's
+              content.Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn" id="a1">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 33%">
+          <img class="card-img-top" src="../../static/天平1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">"法院专递"服务</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.Some quick example text to build on the card title and make up the bulk of the card's
+              content.Some quick example text to build on the card title and make up the bulk of the card's
+
+              content.Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn " id="a2">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 33%">
+          <img class="card-img-top" src="../../static/申图片.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">"申鲜邮"平台</h5>
+            <p class="card-text">关注“中国邮政物流速递上海分公司”微信公众号，访问更多优质产品</p>
+            <a href="#" class="btn " id="a3">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </el-tab-pane>
+
+
     <!--站点分布模块-->
     <el-tab-pane label="站点分布">
       <baidu-map class="bm-view"
@@ -124,6 +167,7 @@
     </pre>
 
     </el-tab-pane>
+
   </el-tabs>
   <my-footer></my-footer>
   </body>
@@ -169,7 +213,7 @@
   }
 
   #hd {
-    margin-top: 40px;
+    margin-top: 20px;
 
   }
 
@@ -201,5 +245,61 @@
     font-family: 微软雅黑;
     line-height: 30px;
     margin-left: 100px;
+  }
+
+  .card {
+    display: inline-block;
+  }
+
+  #a1 {
+    color: #10964b;
+    border: #2c8f06 solid 1px;
+    outline: none;
+  }
+
+  #a1:hover {
+    color: white;
+    background-color: #2c8f06;
+  }
+
+  #a1:focus {
+    outline: none;
+    /*border: none;*/
+    border-color: transparent;
+    /*color: white;*/
+    /*background-color: #15b45e;*/
+  }
+  #a2 {
+    color: #831101;
+    border: #831101 solid 1px;
+    outline: none;
+  }
+  #a2:hover {
+    color: white;
+    background-color: #831101;
+  }
+
+  #a2:focus {
+    outline: none;
+    border: none;
+    border-color: transparent;
+    /*color: white;*/
+    /*background-color: #15b45e;*/
+  }
+
+  a:focus {
+    outline: none;
+    border: none;
+    border-color: transparent;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 500px;
+  }
+  .card{border: #a1a1a1 solid 1px;
+    height: 900px;
+
+
   }
 </style>

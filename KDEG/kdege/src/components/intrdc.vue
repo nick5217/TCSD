@@ -42,6 +42,7 @@
           <h3>暂未上线，敬请期待！</h3>
         </div>
 
+
       </el-tab-pane>
       <el-tab-pane label="第三方">
         <div class="text">
@@ -55,35 +56,38 @@
       </el-tab-pane>
       <!--价目表-->
       <el-tab-pane label="资费查询">
-        <center><h1>”快递e哥“即时平台产品价格表</h1></center>
-        <table style="margin-left:60px">
-          <thead>
-          <tr>
-            <th>序号</th>
-            <th>产品种类</th>
-            <th>价格</th>
-            <th>产品时效定义</th>
-            <th>备注</th>
-          </tr>
-          </thead>
-          <tbody v-for="item in table1">
-          <tr style="width: 100px">
-            <td style="width: 100px">{{item.id}}</td>
-            <td style="width: 100px">{{item.type}}</td>
-            <td>{{item.price}}</td>
-            <td>{{item.def}}</td>
-            <td style="width: 100px">{{item.other}}</td>
-
-          </tr>
+        <img src="../../static/价目表.png" width="100%"/>
 
 
-          </tbody>
+        <!--<center><h1>”快递e哥“即时平台产品价格表</h1></center>-->
+        <!--<table style="margin-left:60px">-->
+          <!--<thead>-->
+          <!--<tr>-->
+            <!--<th>序号</th>-->
+            <!--<th>产品种类</th>-->
+            <!--<th>价格</th>-->
+            <!--<th>产品时效定义</th>-->
+            <!--<th>备注</th>-->
+          <!--</tr>-->
+          <!--</thead>-->
+          <!--<tbody v-for="item in table1">-->
+          <!--<tr style="width: 100px">-->
+            <!--<td style="width: 100px">{{item.id}}</td>-->
+            <!--<td style="width: 100px">{{item.type}}</td>-->
+            <!--<td>{{item.price}}</td>-->
+            <!--<td>{{item.def}}</td>-->
+            <!--<td style="width: 100px">{{item.other}}</td>-->
+
+          <!--</tr>-->
 
 
-        </table>
+          <!--</tbody>-->
 
 
-      </el-tab-pane>
+        <!--</table>-->
+
+
+       </el-tab-pane>
       <!--操作指南模块-->
       <el-tab-pane label="操作指南">
         <div style=";margin-left: 40px">
@@ -207,7 +211,7 @@
   }
 
   #hd {
-    margin-top: 40px;
+    margin-top: 20px;
 
   }
 

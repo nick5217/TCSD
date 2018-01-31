@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>vuetst</title>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <link rel="shortcut icon" href="../src/assets/favicon  .ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../src/assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
 <div id="guess">
@@ -18,16 +18,35 @@
   <input type="text" placeholder="hello" v-model="m1">
   <input type="text" placeholder="hello" v-model="m1">
 </div>
-
-<div id="t4" v-bind:style="color:color3">
+<div id="t4" v-bind:class="{color:color1}">
   <p>{{m2}}</p>
   <p>{{rem2}}</p>
-  <p>问个问题：</p>
+  <p>问个问题:</p>
   <input v-model="question">
   <p>{{answer}}</p>
   <input type="radio" name="sex" v-model="color1" value=true>
   <input type="radio" name="sex" v-model="color1">
   <p>你选了{{color1}}</p>
+  <div v-if="yesNO">你好</div>
+  <div v-else>不好</div>
+  <div v-if="name1==1">
+    你爸:<input type="text" placeholder="hhh">
+  </div>
+  <div v-else>
+    你妈:<input type="text" placeholder="xxx">
+  </div>
+  <button @click="c1">nihao</button>
+  <ul>
+    <li v-for="(it,index) in list1">{{index}}+{{it.prj}}</li>
+    <!--<li v-for="(index,key) in list1"> {{key}} {{index}}</li>-->
+    <li v-for="it in list1" :key="it.id">{{}}+{{it}}</li>
+  </ul>
+</div>
+<div>
+  <button @click="clk1">click</button>
+  <p>{{message2}}+{{num1}}+"次"</p>
+
+
 </div>
 </body>
 <script type="application/javascript">
@@ -35,6 +54,8 @@
     el: '#t4',
     data:
       {
+        message2: '你点了',
+        num1: '',
         m2: 'hell',
         question: '',
         answer: '',
@@ -43,9 +64,34 @@
         color2: 'color',
         color1: '',
         size2: 'size',
-        color3: "red"
-
+        color3: 'red',
+        fontSize: 'large',
+        yesNO: NaN,
+        name1: '1',
+        style1: {
+          color: 'red',
+          backgroundColor: 'black'
+        },
+        list1: [
+          {
+            prj: "i",
+            sex: "f"
+          },
+          {
+            prj: "j",
+            sex: "k"
+          }
+        ]
       },
+    methods: {
+      c1: function () {
+        if (this.name1 != "2") {
+          return this.name1 = "2"
+        }
+        return this.name1 = "1"
+      }
+
+    },
     watch: {
       question: function () {
         this.answer = "问你麻痹"
@@ -78,7 +124,6 @@
     el: '#t3',
     data: {
       m1: 'hello1'
-
     }
   })
 

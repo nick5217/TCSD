@@ -18,7 +18,6 @@ import $ from 'jquery'
 Vue.component('my-footer',
   {
     template: '<div style="width: 100%;position: fixed;bottom: 0px;height: 40px;background-color: white;line-height: 40px;z-index: 20">' +
-
     '<strong>"快递E哥"即时平台</strong>' +
     '&nbsp;&nbsp;&nbsp;Tel:56986113   E-mail:emskdge@163.com' +
     '&nbsp;&nbsp;&nbsp;<strong>上海邮政速递物流</strong>' +
@@ -36,6 +35,7 @@ Vue.component('my-header', {
   '      <!--style="font-style: italic;font-size: 40px;;display: inline-block;;margin-bottom: 10px"><strong>新时代即时递寄递平台</strong>-->\n' +
   '      <!--</span>-->\n' +
   '      <img src="../static/新logo.png" width="100%"/>\n' +
+  '<hr style="background-color:#07478e;height: 3px;margin-bottom: 0px" />\n' +
   '    </div>\n' +
   '\n' +
   '    <el-menu :default-active="activeIndex2"\n' +

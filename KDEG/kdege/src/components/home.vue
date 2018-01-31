@@ -100,7 +100,6 @@
         var myGeo = new BMap.Geocoder();
 
 
-
         var stri;
         var pointA, pointB;
         var price;
@@ -198,11 +197,6 @@
 
   }
 
-  #hd {
-    margin-top: 40px;
-
-  }
-
   body {
     width: 1200px;
     /*border: black solid;*/
@@ -228,6 +222,11 @@
     line-height: 50px;
     color: white;
     font-size: x-large;
+  }
+
+  #hd {
+    margin-top: 20px;
+
   }
 
   /*跑马灯*/
