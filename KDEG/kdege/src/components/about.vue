@@ -4,7 +4,7 @@
   <my-header></my-header>
 
   <!--轮播图-->
-  <div id="roll">
+  <div id="roll" style="outline: none">
     <el-carousel height="400px" type="card" style="outline: none">
       <el-carousel-item v-for="item in img1" :key="item">
         <img :src="item.url" height="100%" width="100%">
@@ -15,7 +15,7 @@
   <!--轮播图-->
 
   <!--菜单栏模块-->
-  <el-tabs :tab-position="tabPosition" style="height: 2000px;" type="card">
+  <el-tabs :tab-position="tabPosition" style="height: 2700px;" type="card">
     <el-tab-pane label="公司介绍"><pre>
                                 中国邮政速递物流股份有限公司上海市分公司简介
 
@@ -49,47 +49,67 @@
 
     <!--主打产品模块-->
 
-    <el-tab-pane label="主打产品">
+    <el-tab-pane label="主打产品" style="height:3000px">
       <!--申鲜邮-->
       <!--<img src="../../static/申图片.jpg"/>-->
       <div id="project">
-        <div class="card" style="width: 33%">
-          <img class="card-img-top" src="../../static/申图片.jpg" alt="Card image cap">
-          <div class="card-body">
+        <el-card :body-style="{ padding: '0px'}" style="width: 33%;height: auto">
+          <img src="../../static/申图片.jpg" class="image">
+          <div style="padding: 14px;">
             <h5 class="card-title">"申鲜邮"平台</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.Some quick example text to build on the card title and make up the bulk of the card's
-              content.Some quick example text to build on the card title and make up the bulk of the card's
-              content.Some quick example text to build on the card title and make up the bulk of the card's
-              content.Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn" id="a1">Go somewhere</a>
+            <p class="card-text">
+              <a class="btn btn-outline " id="a1" data-toggle="collapse" href="#collapseExample1" role="button"
+                 aria-controls="collapseExample1">查看详情</a>
+              <br>
+            <div class="collapse" id="collapseExample1">
+              <div class="card card-body" style="height: 300px;border: none">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="card" style="width: 33%">
-          <img class="card-img-top" src="../../static/天平1.jpg" alt="Card image cap">
-          <div class="card-body">
+        </el-card>
+        <el-card :body-style="{ padding: '0px' }" style="width: 33%;height: auto">
+          <img src="../../static/天平1.jpg" class="image" style="transfrom:scale(2,2);">
+          <div style="padding: 14px;">
             <h5 class="card-title">"法院专递"服务</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.Some quick example text to build on the card title and make up the bulk of the card's
-              content.Some quick example text to build on the card title and make up the bulk of the card's
+            <p class="card-text">
+              <a class="btn btn-outline-danger " id="a2" data-toggle="collapse" href="#collapseExample2" role="button"
+                 aria-controls="collapseExample2">查看详情</a>
+              <br>
+            <div class="collapse" id="collapseExample2">
+              <div class="card card-body" style="height: 300px;border: none">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                anim
+                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              </div>
+            </div>
 
-              content.Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn " id="a2">Go somewhere</a>
           </div>
-        </div>
-        <div class="card" style="width: 33%">
-          <img class="card-img-top" src="../../static/申图片.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">"申鲜邮"平台</h5>
-            <p class="card-text">关注“中国邮政物流速递上海分公司”微信公众号，访问更多优质产品</p>
-            <a href="#" class="btn " id="a3">Go somewhere</a>
+        </el-card>
+        <el-card :body-style="{ padding: '0px' }" style="width: 33%;height: auto">
+          <div><img src="../../static/上海邮政速递物流公众号.png" class="image"></div>
+          <div style="padding: 14px;">
+            <p class="card-text">
+              <a class="btn btn-info " id="a3" data-toggle="collapse" href="#collapseExample3" role="button"
+                 aria-controls="collapseExample3">查看详情</a>
+              <br>
+            <div class="collapse" id="collapseExample3">
+              <div class="card card-body" style="height: 300px;border: none">
+                关注“中国邮政物流速递上海分公司”微信公众号，访问更多优质产品
+              </div>
+            </div>
+
           </div>
-        </div>
+        </el-card>
       </div>
     </el-tab-pane>
 
+    <!--测试容器-->
+    <el-row type="flex" class="row-bg" justify="space-around">
+      <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
+      <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+    </el-row>
 
     <!--站点分布模块-->
     <el-tab-pane label="站点分布">
@@ -201,8 +221,12 @@
 </script>
 <style>
   img {
-    display: inline-block;
+    /*cursor: pointer;*/
+    transition: all 0.6s;
+  }
 
+  img:hover {
+    transform: scale(1.4);
   }
 
   <!--
@@ -262,44 +286,78 @@
     background-color: #2c8f06;
   }
 
-  #a1:focus {
-    outline: none;
-    /*border: none;*/
-    border-color: transparent;
-    /*color: white;*/
-    /*background-color: #15b45e;*/
-  }
   #a2 {
     color: #831101;
     border: #831101 solid 1px;
     outline: none;
   }
+
   #a2:hover {
     color: white;
     background-color: #831101;
   }
 
-  #a2:focus {
+  #a3 {
+    color: #15a0b8;
+    border: #15a0b8 solid 1px;
     outline: none;
-    border: none;
-    border-color: transparent;
-    /*color: white;*/
-    /*background-color: #15b45e;*/
+    background-color: white;
   }
 
-  a:focus {
-    outline: none;
-    border: none;
-    border-color: transparent;
+  #a3:hover {
+    color: white;
+    background-color: #15a0b8;
   }
-
   .card-img-top {
     width: 100%;
     height: 500px;
   }
-  .card{border: #a1a1a1 solid 1px;
-    height: 900px;
 
+  .card {
+    border: #a1a1a1 solid 1px;
+    /*height: 900px;*/
+  }
 
+  .card-title {
+    font-style: revert;
+  }
+
+  .time {
+    font-size: 13px;
+    color: #999;
+  }
+
+  .bottom {
+    margin-top: 13px;
+    line-height: 12px;
+  }
+
+  .button {
+    padding: 0;
+    float: right;
+  }
+
+  .image {
+    width: 100%;
+  }
+
+  .clearfix:before,
+  .clearfix:after {
+    display: table;
+    content: "";
+  }
+
+  .clearfix:after {
+    clear: both
+  }
+
+  el-card {
+    display: inline-block;
+  }
+
+  #project {
+    width: 100%;
+    display: inline;
+    height: 3000px;
   }
 </style>
