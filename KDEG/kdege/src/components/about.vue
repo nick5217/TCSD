@@ -78,9 +78,13 @@
               <br>
             <div class="collapse" id="collapseExample2">
               <div class="card card-body" style="height: 300px;border: none">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                anim
-                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+
+                 1.法院文书寄递
+                 采用“一单一寄”的标准要求，确保寄件方与收件方的重要文件能被准确、快速、及时、安全地送达。
+<br>
+                2.
+
+
               </div>
             </div>
 
@@ -106,9 +110,15 @@
 
     <!--测试容器-->
     <el-row type="flex" class="row-bg" justify="space-around">
-      <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-      <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-      <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="6">
+        <div class="grid-content bg-purple"></div>
+      </el-col>
+      <el-col :span="6">
+        <div class="grid-content bg-purple-light"></div>
+      </el-col>
+      <el-col :span="6">
+        <div class="grid-content bg-purple"></div>
+      </el-col>
     </el-row>
 
     <!--站点分布模块-->
@@ -308,6 +318,7 @@
     color: white;
     background-color: #15a0b8;
   }
+
   .card-img-top {
     width: 100%;
     height: 500px;
