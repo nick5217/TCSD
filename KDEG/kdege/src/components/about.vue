@@ -63,7 +63,9 @@
               <br>
             <div class="collapse" id="collapseExample1">
               <div class="card card-body" style="height: 300px;border: none">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                “申鲜邮”是上海邮政推出的优质农产品生鲜冷链配送平台服务。速度快，破损率低，让百姓能吃到新鲜、优质的果蔬及附属产品。
+                <br><strong style="font-size: larger;font-style: italic">"保障温度，保证速度，保卫质量"</strong>
+
               </div>
             </div>
           </div>
@@ -79,12 +81,10 @@
             <div class="collapse" id="collapseExample2">
               <div class="card card-body" style="height: 300px;border: none">
 
-                 1.法院文书寄递
-                 采用“一单一寄”的标准要求，确保寄件方与收件方的重要文件能被准确、快速、及时、安全地送达。
-<br>
-                2.
-
-
+                1.<strong> 法院文书寄递</strong>
+                中国邮政物流速递上海市分公司严格遵守“最高人民法院关于法院专递方式邮寄送达民事诉讼文书的若干规定”，采用“一单一寄”的标准要求，确保寄件方与收件方的重要文件能被准确、快速、及时、安全地送达。
+                <br><br>
+                <strong>我们还将陆续推出“公告送达”服务，敬请期待！</strong>
               </div>
             </div>
 
@@ -99,15 +99,13 @@
               <br>
             <div class="collapse" id="collapseExample3">
               <div class="card card-body" style="height: 300px;border: none">
-                关注“中国邮政物流速递上海分公司”微信公众号，访问更多优质产品
+                扫描上方二维码关注“中国邮政物流速递上海分公司”微信公众号，访问更多优质产品
               </div>
             </div>
-
           </div>
         </el-card>
       </div>
     </el-tab-pane>
-
     <!--测试容器-->
     <el-row type="flex" class="row-bg" justify="space-around">
       <el-col :span="6">
@@ -230,12 +228,12 @@
 
 </script>
 <style>
-  img {
+  #roll, #project img {
     /*cursor: pointer;*/
     transition: all 0.6s;
   }
 
-  img:hover {
+  #project img:hover {
     transform: scale(1.4);
   }
 
@@ -248,7 +246,6 @@
 
   #hd {
     margin-top: 20px;
-
   }
 
   .el-menu-item {
