@@ -56,16 +56,16 @@
         <el-card :body-style="{ padding: '0px'}" style="width: 33%;height: auto">
           <img src="../../static/申图片.jpg" class="image">
           <div style="padding: 14px;">
-            <h5 class="card-title">"申鲜邮"平台</h5>
-            <p class="card-text">
+            <h5>"申鲜邮"平台</h5>
+            <p>
               <a class="btn btn-outline " id="a1" data-toggle="collapse" href="#collapseExample1" role="button"
                  aria-controls="collapseExample1">查看详情</a>
               <br>
             <div class="collapse" id="collapseExample1">
-              <div class="card card-body" style="height: 300px;border: none">
+              <div style="height: 300px;border: none">
                 “申鲜邮”是上海邮政推出的优质农产品生鲜冷链配送平台服务。速度快，破损率低，让百姓能吃到新鲜、优质的果蔬及附属产品。
                 <br><strong style="font-size: larger;font-style: italic">"保障温度，保证速度，保卫质量"</strong>
-
+                （可关注“上海邮政物流速递”微信公众号，进入在线商场购物）
               </div>
             </div>
           </div>
@@ -73,32 +73,31 @@
         <el-card :body-style="{ padding: '0px' }" style="width: 33%;height: auto">
           <img src="../../static/天平1.jpg" class="image" style="transfrom:scale(2,2);">
           <div style="padding: 14px;">
-            <h5 class="card-title">"法院专递"服务</h5>
-            <p class="card-text">
+            <h5>"法院专递"服务</h5>
+            <p>
               <a class="btn btn-outline-danger " id="a2" data-toggle="collapse" href="#collapseExample2" role="button"
                  aria-controls="collapseExample2">查看详情</a>
               <br>
             <div class="collapse" id="collapseExample2">
-              <div class="card card-body" style="height: 300px;border: none">
-
+              <div style="height: 300px;border: none">
                 1.<strong> 法院文书寄递</strong>
                 中国邮政物流速递上海市分公司严格遵守“最高人民法院关于法院专递方式邮寄送达民事诉讼文书的若干规定”，采用“一单一寄”的标准要求，确保寄件方与收件方的重要文件能被准确、快速、及时、安全地送达。
                 <br><br>
                 <strong>我们还将陆续推出“公告送达”服务，敬请期待！</strong>
               </div>
             </div>
-
           </div>
         </el-card>
         <el-card :body-style="{ padding: '0px' }" style="width: 33%;height: auto">
           <div><img src="../../static/上海邮政速递物流公众号.png" class="image"></div>
           <div style="padding: 14px;">
-            <p class="card-text">
+            <h5>"申鲜邮"平台</h5> <p>
               <a class="btn btn-info " id="a3" data-toggle="collapse" href="#collapseExample3" role="button"
                  aria-controls="collapseExample3">查看详情</a>
               <br>
             <div class="collapse" id="collapseExample3">
-              <div class="card card-body" style="height: 300px;border: none">
+              <div style="height: 300px;border: none">
+
                 扫描上方二维码关注“中国邮政物流速递上海分公司”微信公众号，访问更多优质产品
               </div>
             </div>
@@ -316,37 +315,9 @@
     background-color: #15a0b8;
   }
 
-  .card-img-top {
-    width: 100%;
-    height: 500px;
-  }
-
-  .card {
-    border: #a1a1a1 solid 1px;
-    /*height: 900px;*/
-  }
-
-  .card-title {
-    font-style: revert;
-  }
-
-  .time {
-    font-size: 13px;
-    color: #999;
-  }
-
-  .bottom {
-    margin-top: 13px;
-    line-height: 12px;
-  }
-
-  .button {
-    padding: 0;
-    float: right;
-  }
-
   .image {
-    width: 100%;
+    width: 358.67px;
+    height: 478.44px;
   }
 
   .clearfix:before,
@@ -359,8 +330,9 @@
     clear: both
   }
 
-  el-card {
+  .el-card {
     display: inline-block;
+    margin: 0px;
   }
 
   #project {
