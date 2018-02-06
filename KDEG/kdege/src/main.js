@@ -62,14 +62,17 @@ Vue.component('my-header', {
   '        <el-menu-item index="3-1">\n' +
   '          公司介绍\n' +
   '        </el-menu-item>\n' +
-  '        <el-menu-item index="3-2">\n' +
+ '<el-menu-item index="3-2">\n' +
+'          主打产品\n' +
+'        </el-menu-item>\n' +
+  '        <el-menu-item index="3-3">\n' +
   '          联系我们\n' +
   '        </el-menu-item>\n' +
-  '        <el-menu-item index="3-3">\n' +
+  '        <el-menu-item index="3-4">\n' +
   '          站点分布\n' +
   '        </el-menu-item>\n' +
   '\n' +
-  '        <el-menu-item index="3-4">第三方</el-menu-item>\n' +
+  '        <el-menu-item index="3-5">第三方</el-menu-item>\n' +
   '      </el-submenu>\n' +
   '      <el-menu-item index="4">\n' +
   '        <router-link to="/interview" style="text-decoration: none;color: black">E哥招募</router-link>\n' +
