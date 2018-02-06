@@ -5,10 +5,9 @@ import App from './App'
 import router from './router'
 import BaiduMap from 'vue-baidu-map'
 import ElementUI from 'element-ui'
-import '../node_modules/jquery'
 import '../theme/index.css'
-import '../node_modules/jquery/dist/jquery.min'
-import $ from 'jquery'
+
+
 // import BaiduMap from 'vue-baidu-map'
 // import 'element-ui/lib/theme-chalk/index.css'
 // import "assets/jqueryLbt/scripts/carousel.js"

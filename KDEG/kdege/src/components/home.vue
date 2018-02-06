@@ -3,18 +3,18 @@
   <body>
   <my-header></my-header>
   <div style="; width:100%;height:100%;margin:0px;position: relative ">
-    <img src="../assets/首页.png" width="100%" style="margin-top: 0px"/>//首页的图片 by刘千羽
+    <img src="../assets/首页.png" width="100%" style="margin-top: 0px"/>
     <el-button type="warning" style="position: absolute;left: 46.2%" onclick="window.open('http://admin.ksudi.com')">
       E键下单
     </el-button>
-    //这个是下单的按钮 在中间，链接是快速递做的登陆页面
+
     <el-button type="warning"
                style="outline: none;position: absolute;top:3790px;left: 7%;color: white;text-decoration: none">
       <router-link to="/interview" style="color: white;text-decoration: none">加入我们</router-link>
     </el-button>
-    //这个是放在二维码上的加入按钮，点击跳到招募页面
+
     <video src="../assets/宣传视频.mp4" width="40%" controls="controls"></video>
-    //宣传视频
+
 
     <!--预估邮价的部分 在页面中间-->
     <div id="guess" style="vertical-align: center">
@@ -49,28 +49,69 @@
       <br>
       <button class="btn btn-success btn-lg"
               style="outline: none;position: absolute;left: 40.2%"
-              @click="open1">预估邮费
+              onclick="s2()">预估邮费
       </button>
       <br>
       <!--暂时的假数据-->
-      <!--<el-dialog :visible.sync="visible" title="Hello world">-->
-      <!--<p>邮费为xx元</p>-->
-      <!--</el-dialog>-->
-      <!--<div id="t1">-->
-      <!--<el-alert-->
-      <!--:title="stri"-->
-      <!--type="success"-->
-      <!--center-->
-      <!--show-icon-->
-      <!--&gt;-->
-      <!--</el-alert>-->
+      <div id="t1">
+        <el-alert
+          :title="stri"
+          type="success"
+          center
+          show-icon
+        >
+        </el-alert>
 
-      <!--</div>-->
+      </div>
 
 
     </div>
   </div>
-  <!--<script type="application/javascript">-->
+  <script type="application/javascript">
+    // import $ from 'jquery'
+    var map = new BMap.Map("allmap")
+    map.enableScrollWheelZoom();//启用滚轮放大缩小，默认禁用
+    map.enableContinuousZoom();
+    var myGeo = new BMap.Geocoder();
+    var stri;
+    var pointA, pointB;
+    var price;
+    var price1, price2;
+
+    function s2() {
+      // var dis =map.getDistance(pointA, pointB)[0];
+      var s = document.getElementById("start");
+      var e = document.getElementById("end");
+      var w = document.getElementById("weight");
+
+      myGeo.getPoint(s.value, function (point) {
+        pointA = point;
+        myGeo.getPoint(e.value, function (point) {
+          pointB = point;
+          var dis = (map.getDistance(pointA, pointB)).toFixed(2);
+          // /到这边为止是得到了所有计算所需的变量了，下面开始计算
+          if (w > 3 && w <= 10) {
+            price1 = (w - 3) * 2;
+            if (w > 10) {
+              price1 = 14 + (w - 10) * 5;
+            }
+          } else {
+            price1 = 0
+          }
+          if (dis > 3000) {
+            price2 = (dis - 3000) / 1000 * 2;
+          } else {
+            price2 = 0
+          }
+          price = (price1 + price2 + 10).toFixed(2);
+          stri = "邮费为" + (price) + "元"
+          var tx1 = document.getElementById("t1");
+          tx1.style.display = "block";
+          alert(stri);
+        }, "上海市")
+      }, "上海市")
+    }
+  </script>
 
   <my-footer></my-footer>
   </body>
@@ -79,77 +120,20 @@
 
 <script type="application/javascript">
 
-  export default {
-    data: function () {
 
+  export default {
+    data() {
       //data里的都是初值
       return {
         activeIndex: '1',
         activeIndex2: '1',
-        start1: '',
-        weighth1: '',
-        end1: '',
+      }
+      methods: {
 
       }
-    },
-    methods: {
-      open1: function () {
-        var map = new BMap.Map("allmap")
-        this.map.enableScrollWheelZoom();//启用滚轮放大缩小，默认禁用
-        this.map.enableContinuousZoom();
-        var myGeo = new BMap.Geocoder();
-
-
-        var stri;
-        var pointA, pointB;
-        var price;
-        var price1, price2;
-        var stri = "hello"
-        myGeo.getPoint(this.start1, function (point) {
-          pointA = point;
-          myGeo.getPoint(this.end1, function (point) {
-            pointB = point;
-            var dis = (map.getDistance(pointA, pointB)).toFixed(2);
-            // /到这边为止是得到了所有计算所需的变量了，下面开始计算
-            if (this.weighth1 > 3 && this.weighth1 <= 10) {
-              price1 = (this.weighth1 - 3) * 2;
-            }
-            else if (this.weighth1 > 10) {
-              price1 = 14 + (this.weighth1 - 10) * 5;
-            }
-            else {
-              price1 = 0
-            }
-            if (dis > 3000) {
-              price2 = (dis - 3000) / 1000 * 2;
-            } else {
-              price2 = 0
-            }
-            price = (price1 + price2 + 10).toFixed(2);
-            stri = "邮费为" + (price) + "元"
-            var tx1 = document.getElementById("t1");
-            tx1.style.display = "block";
-            alert(stri);
-            this.$alert(stri, '预估邮费为', {
-              confirmButtonText: '确定',
-              dangerouslyUseHTMLString: true
-            });
-          }, "上海市")
-        }, "上海市")
-      },
-
 
     }
 
-    // open1() {
-    //
-    //   // const h = this.$createElement;
-    //   this.$notify({
-    //     title: '预计邮费为',
-    //     message: stri
-    //   });
-    //
-    // }
   }
 
 </script>
@@ -197,6 +181,11 @@
 
   }
 
+  #hd {
+    margin-top: 40px;
+
+  }
+
   body {
     width: 1200px;
     /*border: black solid;*/
@@ -222,11 +211,6 @@
     line-height: 50px;
     color: white;
     font-size: x-large;
-  }
-
-  #hd {
-    margin-top: 20px;
-
   }
 
   /*跑马灯*/
