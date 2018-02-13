@@ -46,34 +46,12 @@ Vue.component('my-header', {
   '             active-text-color="#f9872a"\n' +
   '             style="margin-bottom: 0px">\n' +
   '      <el-menu-item index="1"> <router-link to="/" style="text-decoration: none;color: black">首页</router-link></el-menu-item>\n' +
-  '      <el-submenu index="2">\n' +
-  '        <template slot="title">\n' +
-  '          <router-link to="/intrdc" style="text-decoration: none;color: black">产品介绍</router-link>\n' +
-  '        </template>\n' +
-  '        <el-menu-item index="2-1">E速达</el-menu-item>\n' +
-  '        <el-menu-item index="2-2">定制配</el-menu-item>\n' +
-  '        <el-menu-item index="2-3">E直达</el-menu-item>\n' +
-  '        <el-menu-item index="2-4">第三方</el-menu-item>\n' +
-  '      </el-submenu>\n' +
-  '      <el-submenu index="3">\n' +
-  '        <template slot="title">\n' +
+  '      <el-menu-item index="2">\n' +
+  '        <router-link to="/intrdc" style="text-decoration: none;color: black">产品介绍</router-link>\n' +
+  '      </el-menu-item>\n' +
+  '      <el-menu-item index="3">\n' +
   '          <router-link to="/about" style="text-decoration: none;color: black">关于我们</router-link>\n' +
-  '        </template>\n' +
-  '        <el-menu-item index="3-1">\n' +
-  '          公司介绍\n' +
-  '        </el-menu-item>\n' +
- '<el-menu-item index="3-2">\n' +
-'          主打产品\n' +
-'        </el-menu-item>\n' +
-  '        <el-menu-item index="3-3">\n' +
-  '          联系我们\n' +
-  '        </el-menu-item>\n' +
-  '        <el-menu-item index="3-4">\n' +
-  '          站点分布\n' +
-  '        </el-menu-item>\n' +
-  '\n' +
-  '        <el-menu-item index="3-5">第三方</el-menu-item>\n' +
-  '      </el-submenu>\n' +
+  '      </el-menu-item>\n' +
   '      <el-menu-item index="4">\n' +
   '        <router-link to="/interview" style="text-decoration: none;color: black">E哥招募</router-link>\n' +
   '      </el-menu-item>\n' +
