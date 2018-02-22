@@ -8,12 +8,8 @@ import ElementUI from 'element-ui'
 import '../theme/index.css'
 
 
-// import BaiduMap from 'vue-baidu-map'
-// import 'element-ui/lib/theme-chalk/index.css'
-// import "assets/jqueryLbt/scripts/carousel.js"
-// import "assets/jqueryLbt/scripts/jquery.min.js"
-// import "assets/jqueryLbt/css/style.css"
-// import jQuery from 'jquery'
+
+//footer组件
 Vue.component('my-footer',
   {
     template: '<div style="width: 100%;position: fixed;bottom: 0px;height: 40px;background-color: white;line-height: 40px;z-index: 20">' +
@@ -24,6 +20,9 @@ Vue.component('my-footer',
     '</div>'
   }
 )
+
+
+//header组件
 Vue.component('my-header', {
   template: ' <div class="all" style="z-index: -10;">\n' +
   '    <div id="hd" style="align-content: center;">\n' +
@@ -33,7 +32,7 @@ Vue.component('my-header', {
   '      <!--<span-->\n' +
   '      <!--style="font-style: italic;font-size: 40px;;display: inline-block;;margin-bottom: 10px"><strong>新时代即时递寄递平台</strong>-->\n' +
   '      <!--</span>-->\n' +
-  '      <img src="../static/新logo.png" width="100%"/>\n' +
+  '  <router-link to="/">   <img src="../static/新logo.png" width="100%"/></router-link> \n' +
   '<hr style="background-color:#07478e;height: 3px;margin-bottom: 0px" />\n' +
   '    </div>\n' +
   '\n' +
@@ -58,15 +57,6 @@ Vue.component('my-header', {
   '      <el-menu-item index="5"><a href="http://www.ems.com.cn/" style="text-decoration: none">EMS</a>\n' +
   '      </el-menu-item>\n' +
   '    </el-menu>\n' +
-  '    <!--<nav>-->\n' +
-  '    <!--<li><strong>首页</strong></li>-->\n' +
-  '    <!--<li style="background-color: #fc6a15"><strong>平台介绍</strong></li>-->\n' +
-  '    <!--<li><strong>特色产品</strong></li>-->\n' +
-  '    <!--<li><strong>联系我们</strong></li>-->\n' +
-  '    <!--<li style="width: 200px;height:44px;background-color: white;border: #f9872a solid"><img-->\n' +
-  '    <!--src="../assets/emslogo.jpg" height="44px"/>-->\n' +
-  '    <!--</li>-->\n' +
-  '    <!--</nav>-->\n' +
   '  </div>'
 
 

@@ -50,7 +50,7 @@
     <!--主打产品模块-->
 
     <el-tab-pane label="主打产品" style="height:3000px">
-      <!--申鲜邮-->
+      <!--这些是简单介绍，还需要扩充-->
       <!--<img src="../../static/申图片.jpg"/>-->
       <div id="project">
         <el-card :body-style="{ padding: '0px'}" style="width: 33%;height: auto">
@@ -91,7 +91,8 @@
         <el-card :body-style="{ padding: '0px' }" style="width: 33%;height: auto">
           <div><img src="../../static/上海邮政速递物流公众号.png" class="image"></div>
           <div style="padding: 14px;">
-            <h5>"申鲜邮"平台</h5> <p>
+            <h5>"申鲜邮"平台</h5>
+            <p>
               <a class="btn btn-info " id="a3" data-toggle="collapse" href="#collapseExample3" role="button"
                  aria-controls="collapseExample3">查看详情</a>
               <br>
@@ -236,8 +237,7 @@
     transform: scale(1.4);
   }
 
-  <!--
-  百度地图设置-- >
+  /*<!--  百度地图设置-- >*/
   .bm-view {
     width: 100%;
     height: 600px;

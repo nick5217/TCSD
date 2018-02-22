@@ -3,19 +3,18 @@
   <body>
   <my-header></my-header>
   <div style="; width:100%;height:100%;margin:0px;position: relative ">
+    <!--首页图片是刘千羽所做-->
     <img src="../assets/首页.png" width="100%" style="margin-top: 0px"/>
     <el-button type="warning" style="position: absolute;left: 46.2%" onclick="window.open('http://admin.ksudi.com')">
+      <!--点击按钮链接到快速递做的登录页面，-->
       E键下单
     </el-button>
-
+    <!--点击按钮到“interview”即快递招募页面-->
     <el-button type="warning"
                style="outline: none;position: absolute;top:3790px;left: 7%;color: white;text-decoration: none">
       <router-link to="/interview" style="color: white;text-decoration: none">加入我们</router-link>
     </el-button>
-
     <video src="../assets/宣传视频.mp4" width="40%" controls="controls"></video>
-
-
     <!--预估邮价的部分 在页面中间-->
     <div id="guess" style="vertical-align: center">
       &nbsp&nbsp
