@@ -64,33 +64,33 @@
 
         <!--<center><h1>”快递e哥“即时平台产品价格表</h1></center>-->
         <!--<table style="margin-left:60px">-->
-          <!--<thead>-->
-          <!--<tr>-->
-            <!--<th>序号</th>-->
-            <!--<th>产品种类</th>-->
-            <!--<th>价格</th>-->
-            <!--<th>产品时效定义</th>-->
-            <!--<th>备注</th>-->
-          <!--</tr>-->
-          <!--</thead>-->
-          <!--<tbody v-for="item in table1">-->
-          <!--<tr style="width: 100px">-->
-            <!--<td style="width: 100px">{{item.id}}</td>-->
-            <!--<td style="width: 100px">{{item.type}}</td>-->
-            <!--<td>{{item.price}}</td>-->
-            <!--<td>{{item.def}}</td>-->
-            <!--<td style="width: 100px">{{item.other}}</td>-->
+        <!--<thead>-->
+        <!--<tr>-->
+        <!--<th>序号</th>-->
+        <!--<th>产品种类</th>-->
+        <!--<th>价格</th>-->
+        <!--<th>产品时效定义</th>-->
+        <!--<th>备注</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody v-for="item in table1">-->
+        <!--<tr style="width: 100px">-->
+        <!--<td style="width: 100px">{{item.id}}</td>-->
+        <!--<td style="width: 100px">{{item.type}}</td>-->
+        <!--<td>{{item.price}}</td>-->
+        <!--<td>{{item.def}}</td>-->
+        <!--<td style="width: 100px">{{item.other}}</td>-->
 
-          <!--</tr>-->
+        <!--</tr>-->
 
 
-          <!--</tbody>-->
+        <!--</tbody>-->
 
 
         <!--</table>-->
 
 
-       </el-tab-pane>
+      </el-tab-pane>
       <!--操作指南模块-->
       <el-tab-pane label="操作指南">
         <div style=";margin-left: 40px">
