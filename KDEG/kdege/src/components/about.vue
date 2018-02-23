@@ -1,6 +1,8 @@
 <!--这块是介绍上海分公司的-->
+
+
 <template>
-  <body>
+<body>
   <my-header></my-header>
 
   <!--轮播图-->
@@ -98,7 +100,6 @@
               <br>
             <div class="collapse" id="collapseExample3">
               <div style="height: 300px;border: none">
-
                 扫描上方二维码关注“中国邮政物流速递上海分公司”微信公众号，访问更多优质产品
               </div>
             </div>
@@ -106,18 +107,7 @@
         </el-card>
       </div>
     </el-tab-pane>
-    <!--测试容器-->
-    <el-row type="flex" class="row-bg" justify="space-around">
-      <el-col :span="6">
-        <div class="grid-content bg-purple"></div>
-      </el-col>
-      <el-col :span="6">
-        <div class="grid-content bg-purple-light"></div>
-      </el-col>
-      <el-col :span="6">
-        <div class="grid-content bg-purple"></div>
-      </el-col>
-    </el-row>
+
 
     <!--站点分布模块-->
     <el-tab-pane label="站点分布">
@@ -148,7 +138,6 @@
                    animation="BMAP_ANIMATION_BOUNCE"></bm-marker>
         <bm-marker :position="{lng: 121.56204,lat:31.230854}" title="陆家嘴商务圈投揽部:迎春路879号"
                    animation="BMAP_ANIMATION_BOUNCE"></bm-marker>
-
       </baidu-map>
     </el-tab-pane>
 
@@ -158,7 +147,7 @@
         <el-card class="box-card">
           <img src="../assets/上海邮政微信.png" width="556" style="padding-left: 200px"/><br>
           <pre>
-            Tel:  021-56986113
+          “快递E哥平台”  Tel:  021-56986113  E-mail: emskdege@163.com
 
           用户通过“上海邮政速递物流”公众号和“快递e哥”APP内即时端口实时下单，实时完成支付费用。<br>
 
@@ -167,6 +156,9 @@
 
         </pre>
         </el-card>
+
+        <br>
+        <h3>上海邮政速递物流：</h3>
         <el-card class="box-card">
           <img src="../assets/EMS二维码.jpg" width="400px" style="margin-right: 30px"/>
           <div style="display: inline-block;border: solid rgba(163,163,163,0.35) 2px;height:430px;width: 500px ">

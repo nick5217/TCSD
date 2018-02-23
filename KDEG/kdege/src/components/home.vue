@@ -87,7 +87,7 @@
         pointA = point;
         myGeo.getPoint(e.value, function (point) {
           pointB = point;
-          var dis = (map.getDistance(pointA, pointB)).toFixed(2);
+          var dis = (map.getDistance(pointA, pointB)).toFixed(1);
           // /到这边为止是得到了所有计算所需的变量了，下面开始计算
           if (w > 3 && w <= 10) {
             price1 = (w - 3) * 2;
@@ -103,7 +103,7 @@
           } else {
             price2 = 0
           }
-          price = (price1 + price2 + 10).toFixed(2);
+          price = (price1 + price2 + 10).toFixed(0);
           stri = "邮费为" + (price) + "元"
 
           alert(stri);

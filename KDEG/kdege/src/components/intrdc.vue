@@ -24,6 +24,7 @@
       <el-tab-pane label="定制配">
         <div class="text">
           <h2>定制配:</h2>
+          <h4>（该产品只针对签约用户，详情咨询客服）</h4>
           <br>
 
           1、当日达：E速达平台提供的上海市浦西外环线 内；浦东中环线以 内范围内；崇明三 岛除外
@@ -61,53 +62,14 @@
       <el-tab-pane label="资费查询">
         <img src="../../static/价目表.png" width="100%"/>
 
-
-        <!--<center><h1>”快递e哥“即时平台产品价格表</h1></center>-->
-        <!--<table style="margin-left:60px">-->
-        <!--<thead>-->
-        <!--<tr>-->
-        <!--<th>序号</th>-->
-        <!--<th>产品种类</th>-->
-        <!--<th>价格</th>-->
-        <!--<th>产品时效定义</th>-->
-        <!--<th>备注</th>-->
-        <!--</tr>-->
-        <!--</thead>-->
-        <!--<tbody v-for="item in table1">-->
-        <!--<tr style="width: 100px">-->
-        <!--<td style="width: 100px">{{item.id}}</td>-->
-        <!--<td style="width: 100px">{{item.type}}</td>-->
-        <!--<td>{{item.price}}</td>-->
-        <!--<td>{{item.def}}</td>-->
-        <!--<td style="width: 100px">{{item.other}}</td>-->
-
-        <!--</tr>-->
-
-
-        <!--</tbody>-->
-
-
-        <!--</table>-->
-
-
       </el-tab-pane>
       <!--操作指南模块-->
       <el-tab-pane label="操作指南">
         <div style=";margin-left: 40px">
-          <!--<ul class="nav nav-pills">-->
-          <!--<li role="presentation" class="active"><a href="#">Home</a></li>-->
-          <!--<li role="presentation"><a href="#">Profile</a></li>-->
-          <!--<li role="presentation"><a href="#">Messages</a></li>-->
-          <!--</ul>-->
+
           <el-tabs type="border-card" style="background-color: white;">
             <el-tab-pane label="App操作篇">
-              <!--<el-steps :active="active" finish-status="success">-->
-              <!--<el-step title="步骤 1"></el-step>-->
-              <!--<el-step title="步骤 2"></el-step>-->
-              <!--<el-step title="步骤 3"></el-step>-->
-              <!--</el-steps>-->
 
-              <!--<el-button style="margin-top: 12px;" @click="next">下一步</el-button>-->
               <img src="../assets/app.png" width="1020px"/><br>
               <a
                 href="../static/附件快递e哥客户下单操作手册.doc" target="_blank"
@@ -154,56 +116,11 @@
         activeIndex: '2',
         activeIndex2: '2',
         tabPosition1: "left",
-        //这块是价目表的数据
-        table1: [{
-          id: 1,
-          type: "E速达",
-          price: "3公里3公斤10元。超过3公里，2元/公里；超过3公斤，2元/公斤；超过10公斤，5元/公斤；来回件费用加收100%，黄浦江过江费6元。",
-          def: "上海市范围内【崇明除外】，寄收距离10公里内3小时送达，超过10公里，每增加5公里增加30分钟",
-          other: ""
-        },
-          {
-            id: 2,
-            type: "当日达",
-            price: "详情电话咨询客服人员",
-            def: "上海市范围内【崇明除外】，当日11:30时前收寄的，承诺当日18：00时前送达的当日寄送，当日送达",
-            other: ""
-          },
-          {
-            id: 3,
-            type: "次晨达",
-            price: "详情电话咨询客服人员",
-            def: " 上海市范围内【崇明除外】，当日17:00时前收寄的，承诺次日12时前送达",
-            other: ""
-          },
-          {
-            id: 4,
-            type: "次日达",
-            price: "详情电话咨询客服人员",
-            def: "上海市范围内【崇明除外】，当日17:00时前收寄的，承诺次日18时前送达",
-            other: ""
-          },
-          {
-            id: 5,
-            type: "E直达",
-            price: "详情电话咨询客服人员",
-            def: "上海市范围内【崇明除外】，专人直取直送的快递服务。",
-            other: ""
-          },
-          {
-            id: 6,
-            type: "第三方",
-            price: "详情电话咨询客服人员",
-            def: "通过第三方快递服务商寄送的快递服务，详情请咨询E速达平台客服人员。",
-            other: ""
-          }]
 
-      };
-    },
-    methods: {}
+          }
 
-
-  };
+      }
+    }
 
 
 </script>

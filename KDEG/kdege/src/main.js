@@ -14,9 +14,9 @@ Vue.component('my-footer',
   {
     template: '<div style="width: 100%;position: fixed;bottom: 0px;height: 40px;background-color: white;line-height: 40px;z-index: 20">' +
     '<strong>"快递E哥"即时平台</strong>' +
-    '&nbsp;&nbsp;&nbsp;Tel:56986113   E-mail:emskdge@163.com' +
+    '&nbsp;&nbsp;&nbsp;Tel:  56986113   E-mail:  emskdege@163.com' +
     '&nbsp;&nbsp;&nbsp;<strong>上海邮政速递物流</strong>' +
-    '&nbsp;&nbsp;&nbsp;Tel:（021）63936666   E-mail:webmaster@shpost.com.cn' +
+    '&nbsp;&nbsp;&nbsp;Tel: （021）63936666   E-mail:  webmaster@shpost.com.cn' +
     '</div>'
   }
 )
@@ -54,7 +54,7 @@ Vue.component('my-header', {
   '      <el-menu-item index="4">\n' +
   '        <router-link to="/interview" style="text-decoration: none;color: black">E哥招募</router-link>\n' +
   '      </el-menu-item>\n' +
-  '      <el-menu-item index="5"><a href="http://www.ems.com.cn/" style="text-decoration: none">EMS</a>\n' +
+  '      <el-menu-item index="5"><a href="http://www.ems.com.cn/" style="text-decoration: none">EMS官网</a>\n' +
   '      </el-menu-item>\n' +
   '    </el-menu>\n' +
   '  </div>'
